@@ -1,0 +1,2177 @@
+{
+  "metadata": {
+    "data_exportacao": "2025-12-12T12:41:03.944264",
+    "total_processos": 101,
+    "total_andamentos": 171,
+    "version": "2.0"
+  },
+  "processos": [
+    {
+      "cnj": "1000419-34.2024.8.26.0431",
+      "status": "andamento",
+      "pasta": "P001298",
+      "parte": "N/A",
+      "partes_processo": "Reqte Carlos Alberto Nunhez, Reqdo Construtora Marimbondo Ltda, Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 5,
+      "ultimo_andamento": {
+        "data": "08-12-2025",
+        "descricao": "Pedido de Expedição de Mandado de Levantamento Juntado Nº Protocolo: WPDR.25.70038440-0_x000D_\nTipo da Petição: Pedido de Expedição de Mandado de Levantamento_x000D_\nData: 08/12/2025 20:27"
+      },
+      "andamentos": [
+        {
+          "data": "11-12-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 1780/2025_x000D_\nData da Publicação: 12/12/2025"
+        },
+        {
+          "data": "10-12-2025",
+          "descricao": "Remetido ao DJE Relação: 1780/2025_x000D_\nTeor do ato: Fls. 358 - Mandado de Levantamento Eletrônico (MLE) expedido em favor da Parte Exequente e, aguardando pela conferência e assinatura do Diretor de Serviço e do MMº. Juiz de Direito._x000D_\nAdvogados(s): Cid Carlos de Freitas (OAB 231735/SP), Luís Carlos Carvalho Firmino (OAB 448957/SP)"
+        },
+        {
+          "data": "10-12-2025",
+          "descricao": "Ato Ordinatório - Intimação - DJE Fls. 358 - Mandado de Levantamento Eletrônico (MLE) expedido em favor da Parte Exequente e, aguardando pela conferência e assinatura do Diretor de Serviço e do MMº. Juiz de Direito."
+        },
+        {
+          "data": "10-12-2025",
+          "descricao": "Documento Juntado"
+        },
+        {
+          "data": "08-12-2025",
+          "descricao": "Pedido de Expedição de Mandado de Levantamento Juntado Nº Protocolo: WPDR.25.70038440-0_x000D_\nTipo da Petição: Pedido de Expedição de Mandado de Levantamento_x000D_\nData: 08/12/2025 20:27"
+        }
+      ]
+    },
+    {
+      "cnj": "1000565-19.2023.8.26.0073",
+      "status": "novo",
+      "pasta": "P001286",
+      "parte": "N/A",
+      "partes_processo": "Embargte: Luciano Jose Menghini, Embargdo: Val Paraiso Empreendimentos Imobiliarios Ltda",
+      "origem": "28ª Câmara de Direito Privado - Classe ou Recurso não encontrado",
+      "total_andamentos": 7,
+      "ultimo_andamento": {
+        "data": "15-04-2024",
+        "descricao": "Execução/Cumprimento de Sentença Iniciada (o) 0001065-68.2024.8.26.0073 - Cumprimento de sentença"
+      },
+      "andamentos": [
+        {
+          "data": "09-12-2025",
+          "descricao": "Subprocesso Cadastrado Processo principal: 1000565-19.2023.8.26.0073"
+        },
+        {
+          "data": "09-12-2025",
+          "descricao": "Subprocesso Cadastrado Seq.: 50 - Embargos de Declaração Cível"
+        },
+        {
+          "data": "01-12-2025",
+          "descricao": "Expedido Certidão CERTIFICO que o v. Acórdão foi disponibilizado no Diário de Justiça Eletrônico Nacional - DJEN de hoje. Considera-se data da publicação o 1° dia útil subsequente."
+        },
+        {
+          "data": "22-08-2024",
+          "descricao": "Subprocesso Unificado ao Principal"
+        },
+        {
+          "data": "15-04-2024",
+          "descricao": "Execução/Cumprimento de Sentença Iniciada (o) 0001065-68.2024.8.26.0073 - Cumprimento de sentença"
+        }
+      ]
+    },
+    {
+      "cnj": "1000630-41.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001262",
+      "parte": "N/A",
+      "partes_processo": "Reqte Leandro Fernando Rodrigues, Reqdo Construtora Marimbondo Ltda., Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 8,
+      "ultimo_andamento": {
+        "data": "12-08-2025",
+        "descricao": "Certidão de Cartório Expedida Certifico e dou fé que, nos termos do art. 102, V, das Normas de Serviço da Corregedoria Geral da Justiça, inexiste mídia digital a ser encaminhada."
+      },
+      "andamentos": [
+        {
+          "data": "09-12-2025",
+          "descricao": "Baixa Definitiva"
+        },
+        {
+          "data": "09-12-2025",
+          "descricao": "Recebidos os Autos do Tribunal de Justiça"
+        },
+        {
+          "data": "09-12-2025",
+          "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 02/12/2025."
+        },
+        {
+          "data": "05-11-2025",
+          "descricao": "Expedido Certidão CERTIFICO que o v. Acórdão foi disponibilizado no Diário de Justiça Eletrônico Nacional - DJEN de hoje. Considera-se data da publicação o 1° dia útil subsequente."
+        },
+        {
+          "data": "12-08-2025",
+          "descricao": "Certidão de Cartório Expedida Certifico e dou fé que, nos termos do art. 102, V, das Normas de Serviço da Corregedoria Geral da Justiça, inexiste mídia digital a ser encaminhada."
+        }
+      ]
+    },
+    {
+      "cnj": "1198425-10.2024.8.26.0100",
+      "status": "andamento",
+      "pasta": "P001310",
+      "parte": "Fernando Coe Razuk",
+      "partes_processo": "Exeqte Condominio Residencial Helbor Home Flex Jardins, Exectdo Fernando Coe Razuk, Endereço Eletrônico Desconhecido,",
+      "origem": "Foro Central Cível - 40ª Vara Cível",
+      "total_andamentos": 5,
+      "ultimo_andamento": {
+        "data": "05-12-2025",
+        "descricao": "Certidão de Publicação Expedida Relação: 2370/2025_x000D_\nData da Publicação: 09/12/2025"
+      },
+      "andamentos": [
+        {
+          "data": "10-12-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 2406/2025_x000D_\nData da Publicação: 11/12/2025"
+        },
+        {
+          "data": "09-12-2025",
+          "descricao": "Remetido ao DJE Relação: 2406/2025_x000D_\nTeor do ato: Fls. 145/146: Ciência ao executado._x000D_\nAdvogados(s): Sebastiao Antonio de Carvalho (OAB 101857/SP), Cid Carlos de Freitas (OAB 231735/SP), Natália Marques de Carvalho de Oliveira (OAB 282367/SP), Roziane Silio Clarindo (OAB 353222/SP)"
+        },
+        {
+          "data": "09-12-2025",
+          "descricao": "Petição Juntada Nº Protocolo: WJMJ.25.42770093-5_x000D_\nTipo da Petição: Petição Intermediária_x000D_\nData: 09/12/2025 10:12"
+        },
+        {
+          "data": "09-12-2025",
+          "descricao": "Ato Ordinatório - Intimação - DJE Fls. 145/146: Ciência ao executado."
+        },
+        {
+          "data": "05-12-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 2370/2025_x000D_\nData da Publicação: 09/12/2025"
+        }
+      ]
+    },
+    {
+      "cnj": "1000004-51.2024.8.26.0431",
+      "status": "novo",
+      "pasta": "P001296",
+      "parte": "N/A",
+      "partes_processo": "Apelante: José Aguinaldo da Silva, Apelado: Construtora Marimbondo Ltda.",
+      "origem": "5ª Câmara de Direito Privado - Apelação Cível",
+      "total_andamentos": 7,
+      "ultimo_andamento": {
+        "data": "29-10-2025",
+        "descricao": "Certidão de Publicação Expedida Relação: 1491/2025_x000D_\nData da Publicação: 30/10/2025"
+      },
+      "andamentos": [
+        {
+          "data": "09-12-2025",
+          "descricao": "Conclusos para o Relator"
+        },
+        {
+          "data": "09-12-2025",
+          "descricao": "Juntada de petição Nº Protocolo: WPRO.25.01997965-1_x000D_\nTipo da Petição: Petições Diversas_x000D_\nData: 09/12/2025 14:12"
+        },
+        {
+          "data": "09-12-2025",
+          "descricao": "Expedido Termo Termo de Juntada - Automática"
+        },
+        {
+          "data": "04-12-2025",
+          "descricao": "Despacho Vistos. Trata-se de recurso de apelação interposto pela parte autora contra sentença que julgou parcialmente procedentes os pedidos iniciais, limitando-se a condenar a parte ré ao pagamento de indenização por danos materiais decorrentes de vícios construtivos e rejeitando a pretensão de reparação por danos morais. Inconformada, a parte apelante pugna pela reforma da sentença, sob a alegação de que os vícios estruturais constatados no imóvel, ainda que corrigíveis, ultrapassam o âmbito do mero inadimplemento contratual e repercutem diretamente na esfera existencial do adquirente, comprometendo seu bem-estar, a tranquilidade familiar e a legítima expectativa depositada na aquisição da moradia própria. Sustenta que o laudo pericial, acompanhado de registro fotográfico, evidencia trincas, infiltrações e falhas de execução aptas a caracterizar efetivo abalo moral, razão pela qual requer a condenação da ré também ao pagamento de danos extrapatrimoniais. Observa-se às fls. 191 a 205 que a apelação delimita a insurgência exclusivamente ao capítulo da sentença que afastou o dano moral, sustentando que a gravidade dos vícios constatados e a frustração decorrente da aquisição de imóvel defeituoso configuram abalo moral indenizável. Registra-se, ademais, a apresentação de manifestação da parte ré às fls. 228/252, reiterada às fls. 258/282, bem como o pagamento voluntário da condenação material às fls. 253/254 e 283, ocasião em que pugna pela extinção da ação, reforçando a tese de inexistência de dano moral e de integral satisfação da obrigação reconhecida na sentença. Assim, manifeste-se a parte ativa/apelante no prazo de 5 (cinco) dias. Decorridos com ou sem manifestação, voltem conclusos para prosseguimento do julgamento. Intimem-se."
+        },
+        {
+          "data": "29-10-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 1491/2025_x000D_\nData da Publicação: 30/10/2025"
+        }
+      ]
+    },
+    {
+      "cnj": "0004736-36.2007.8.26.0319",
+      "status": "espera",
+      "pasta": "Boso",
+      "parte": "Cid Carlos de Freitas",
+      "partes_processo": "Invtante Fábio Borges Boso, Herdeiro Marcos Boso, Invtardo Delfino Boso, Interesdo. Benedito de Oliveira Lima Neto, Credor Freitas Martinho Mesquita Advogados e Frederico de Ávila Miguel, TerIntCer Auto Posto Avenida de Lençóis Paulista Ltda",
+      "origem": "Foro de Lençóis Paulista - 1ª Vara",
+      "total_andamentos": 3,
+      "ultimo_andamento": {
+        "data": "26-11-2025",
+        "descricao": "Documento Juntado Nº Protocolo: FLEP.21.00000009-4_x000D_\nTipo da Petição: Certidão (Digitalizada)_x000D_\nData: 08/01/2021 14:45_x000D_\nComplemento: Regularização de cadastro."
+      },
+      "andamentos": [
+        {
+          "data": "09-12-2025",
+          "descricao": "Conclusos para Decisão"
+        },
+        {
+          "data": "09-12-2025",
+          "descricao": "Documento Juntado"
+        },
+        {
+          "data": "26-11-2025",
+          "descricao": "Documento Juntado Nº Protocolo: FLEP.21.00000009-4_x000D_\nTipo da Petição: Certidão (Digitalizada)_x000D_\nData: 08/01/2021 14:45_x000D_\nComplemento: Regularização de cadastro."
+        }
+      ]
+    },
+    {
+      "cnj": "1000970-82.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001269",
+      "parte": "N/A",
+      "partes_processo": "Embargte: Construtora Marimbondo Ltda., Embargdo: Robson Torres Batista",
+      "origem": "4ª Câmara de Direito Privado - Classe ou Recurso não encontrado",
+      "total_andamentos": 4,
+      "ultimo_andamento": {
+        "data": "10-07-2025",
+        "descricao": "Certidão de Cartório Expedida Certifico e dou fé que, nos termos do art. 102, V, das Normas de Serviço da Corregedoria Geral da Justiça, inexiste mídia digital a ser encaminhada."
+      },
+      "andamentos": [
+        {
+          "data": "09-12-2025",
+          "descricao": "Processo encaminhado para o Magistrado"
+        },
+        {
+          "data": "05-12-2025",
+          "descricao": "Inclusão em Pauta Pauta Eletrônica: Início: 21/01/2026 - Término: 28/01/2026"
+        },
+        {
+          "data": "17-11-2025",
+          "descricao": "Subprocesso Cadastrado Seq.: 50 - Embargos de Declaração Cível"
+        },
+        {
+          "data": "10-07-2025",
+          "descricao": "Certidão de Cartório Expedida Certifico e dou fé que, nos termos do art. 102, V, das Normas de Serviço da Corregedoria Geral da Justiça, inexiste mídia digital a ser encaminhada."
+        }
+      ]
+    },
+    {
+      "cnj": "0001176-50.2021.8.26.0431",
+      "status": "andamento",
+      "pasta": "P001201",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Denilson José dos Santos Garcia, Exectdo Construtora Marimbondo Ltda., Perito Mário Miranda",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 3,
+      "ultimo_andamento": {
+        "data": "08-12-2025",
+        "descricao": "Embargos de Declaração Juntados Nº Protocolo: WPDR.25.70038312-8_x000D_\nTipo da Petição: Embargos de Declaração_x000D_\nData: 08/12/2025 07:19"
+      },
+      "andamentos": [
+        {
+          "data": "09-12-2025",
+          "descricao": "Decurso de Prazo Certidão Embargos de Declaração tempestivos"
+        },
+        {
+          "data": "09-12-2025",
+          "descricao": "Conclusos para Decisão"
+        },
+        {
+          "data": "08-12-2025",
+          "descricao": "Embargos de Declaração Juntados Nº Protocolo: WPDR.25.70038312-8_x000D_\nTipo da Petição: Embargos de Declaração_x000D_\nData: 08/12/2025 07:19"
+        }
+      ]
+    },
+    {
+      "cnj": "1001676-65.2022.8.26.0431",
+      "status": "andamento",
+      "pasta": "P001283",
+      "parte": "N/A",
+      "partes_processo": "Reqte Rodrigo Aparecido Longo, Reqdo Construtora Marimbondo Ltda, Perito Danilo Masson Mattos",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "05-12-2025",
+        "descricao": "Ato Ordinatório - Intimação - DJE Aguardando apresentação de contrarrazões pela(s) parte(s) recorrida(s), no prazo de 15 (quinze) dias."
+      },
+      "andamentos": [
+        {
+          "data": "09-12-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 1759/2025_x000D_\nData da Publicação: 10/12/2025"
+        },
+        {
+          "data": "05-12-2025",
+          "descricao": "Ato Ordinatório - Intimação - DJE Aguardando apresentação de contrarrazões pela(s) parte(s) recorrida(s), no prazo de 15 (quinze) dias."
+        }
+      ]
+    },
+    {
+      "cnj": "2248817-09.2025.8.26.0000",
+      "status": "andamento",
+      "pasta": "P001299",
+      "parte": "N/A",
+      "partes_processo": "Agravante: Val Paraiso Empreendimentos Imobiliarios Ltda, Agravado: Luciano José Menghini,",
+      "origem": "28ª Câmara de Direito Privado - Agravo de Instrumento",
+      "total_andamentos": 3,
+      "ultimo_andamento": {
+        "data": "03-12-2025",
+        "descricao": "Alteração de relator em cumprimento a despacho Magistrado de origem: Vaga - 5 / Valentino Aparecido de Andrade_x000D__x000D_Área de atuação do magistrado (origem): Ambas_x000D_Magistrado de destino: Vaga - 5 / Márcio Boscaro_x000D_Área de atuação do magistrado (destino): Ambas_x000D_Motivo: Dje de 27/11/2025: OPÇÃO do Desembargador MÁRCIO ANTONIO BOSCARO pela 28ª Câmara de Direito Privado, na cadeira anteriormente ocupada pela Desembargadora Teresa Cristina Motta Ramos Marques_x000D_\n\"Dje de 28/11/2025:  Dr. VALENTINO APARECIDO DE ANDRADE, JUIZ(A) DE DIREITO SUBSTITUTO(A) EM 2º GRAU, cessando a designação para \nresponder pelo acervo e eventuais prevenções da Desa. Teresa Cristina Motta Ramos Marques (aposentada), na 28ª Câmara de Direito \nPrivado a partir de 28/11/2025.\"_x000D_\nM356936"
+      },
+      "andamentos": [
+        {
+          "data": "09-12-2025",
+          "descricao": "Expedido Certidão Certifico que o(s) r(r). despacho(s) retro(s) foi(ram) disponibilizado(s) no Diário de Justiça Eletrônico Nacional - DJEN de hoje. Considera-se data da publicação o primeiro dia útil subsequente."
+        },
+        {
+          "data": "09-12-2025",
+          "descricao": "Conclusos para o Relator"
+        },
+        {
+          "data": "03-12-2025",
+          "descricao": "Alteração de relator em cumprimento a despacho Magistrado de origem: Vaga - 5 / Valentino Aparecido de Andrade_x000D__x000D_Área de atuação do magistrado (origem): Ambas_x000D_Magistrado de destino: Vaga - 5 / Márcio Boscaro_x000D_Área de atuação do magistrado (destino): Ambas_x000D_Motivo: Dje de 27/11/2025: OPÇÃO do Desembargador MÁRCIO ANTONIO BOSCARO pela 28ª Câmara de Direito Privado, na cadeira anteriormente ocupada pela Desembargadora Teresa Cristina Motta Ramos Marques_x000D_\n\"Dje de 28/11/2025:  Dr. VALENTINO APARECIDO DE ANDRADE, JUIZ(A) DE DIREITO SUBSTITUTO(A) EM 2º GRAU, cessando a designação para \nresponder pelo acervo e eventuais prevenções da Desa. Teresa Cristina Motta Ramos Marques (aposentada), na 28ª Câmara de Direito \nPrivado a partir de 28/11/2025.\"_x000D_\nM356936"
+        }
+      ]
+    },
+    {
+      "cnj": "1002984-80.2021.8.26.0655",
+      "status": "andamento",
+      "pasta": "P000203X",
+      "parte": "N/A",
+      "partes_processo": "Reqte Marcio Correia Cazzamatta, Reqdo Durvalino Roque Aizza, Perito Cecilia Itapura de Miranda",
+      "origem": "Foro de Várzea Paulista - 1ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "05-12-2025",
+        "descricao": "Certidão de Publicação Expedida Relação: 1870/2025_x000D_\nData da Publicação: 09/12/2025"
+      },
+      "andamentos": [
+        {
+          "data": "09-12-2025",
+          "descricao": "Petição Juntada Nº Protocolo: WVPT.25.70064898-9_x000D_\nTipo da Petição: Petições Diversas_x000D_\nData: 09/12/2025 14:37"
+        },
+        {
+          "data": "05-12-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 1870/2025_x000D_\nData da Publicação: 09/12/2025"
+        }
+      ]
+    },
+    {
+      "cnj": "1011437-02.2024.8.26.0286",
+      "status": "andamento",
+      "pasta": "P001305",
+      "parte": "N/A",
+      "partes_processo": "Reqte Município de Itu, Reqdo Boncompagni Empr Imob Ltda, Perito Rafael Oto Bayer",
+      "origem": "Foro de Itu - 2ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "08-12-2025",
+        "descricao": "Petição Juntada Nº Protocolo: WITU.25.70147721-5_x000D_\nTipo da Petição: Manifestação do Perito_x000D_\nData: 08/12/2025 11:19"
+      },
+      "andamentos": [
+        {
+          "data": "08-12-2025",
+          "descricao": "Petição Juntada Nº Protocolo: WITU.25.70147721-5_x000D_\nTipo da Petição: Manifestação do Perito_x000D_\nData: 08/12/2025 11:19"
+        }
+      ]
+    },
+    {
+      "cnj": "1002875-58.2025.8.26.0483",
+      "status": "andamento",
+      "pasta": "P001308",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Kleber Giacomini, Exectdo Elton José de França Chicalé",
+      "origem": "Foro de Presidente Venceslau - 2ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "05-12-2025",
+        "descricao": "Conclusos para Despacho"
+      },
+      "andamentos": [
+        {
+          "data": "05-12-2025",
+          "descricao": "Conclusos para Despacho"
+        },
+        {
+          "data": "05-12-2025",
+          "descricao": "Conclusos para Despacho"
+        }
+      ]
+    },
+    {
+      "cnj": "1001847-56.2021.8.26.0431",
+      "status": "novo",
+      "pasta": "P001249",
+      "parte": "N/A",
+      "partes_processo": "Reqte Raquel Carvalho de Macedo, Reqdo Construtora Marimbondo Ltda, Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "03-11-2025",
+        "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 25/10/2025"
+      },
+      "andamentos": [
+        {
+          "data": "05-12-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Inexistência de Custas e Arquivamento - Cível - 61615"
+        },
+        {
+          "data": "03-11-2025",
+          "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 25/10/2025"
+        }
+      ]
+    },
+    {
+      "cnj": "0017930-96.2020.8.26.0562",
+      "status": "andamento",
+      "pasta": "P000106",
+      "parte": "CSB Prime Empreendimentos",
+      "partes_processo": "Exeqte Aquilino Ernesto Tito Yanez Pujol, Exectdo Alexandre Muradas Ruffo, Interesdo. Claudia Regina Moreira Vasconcellos Ruffo, Interessado CID CARLOS DE FREITAS",
+      "origem": "Foro de Santos - 12ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "05-12-2025",
+        "descricao": "Suspensão do Prazo Prazo referente ao usuário foi alterado para 03/02/2026 devido à alteração da tabela de feriados_x000D_\nPrazo referente ao usuário foi alterado para 29/01/2026 devido à alteração da tabela de feriados"
+      },
+      "andamentos": [
+        {
+          "data": "05-12-2025",
+          "descricao": "Suspensão do Prazo Prazo referente ao usuário foi alterado para 03/02/2026 devido à alteração da tabela de feriados_x000D_\nPrazo referente ao usuário foi alterado para 29/01/2026 devido à alteração da tabela de feriados"
+        }
+      ]
+    },
+    {
+      "cnj": "1172104-69.2023.8.26.0100",
+      "status": "andamento",
+      "pasta": "P001295",
+      "parte": "N/A",
+      "partes_processo": "Reqte Luciano José Menghini, Reqdo Gerson Edmundo Menghini",
+      "origem": "Foro Central Cível - 20ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "05-12-2025",
+        "descricao": "Certidão de Publicação Expedida Relação: 2253/2025_x000D_\nData da Publicação: 09/12/2025"
+      },
+      "andamentos": [
+        {
+          "data": "05-12-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 2253/2025_x000D_\nData da Publicação: 09/12/2025"
+        }
+      ]
+    },
+    {
+      "cnj": "1000468-46.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001256",
+      "parte": "N/A",
+      "partes_processo": "Reqte Luís Otávio Fracaroli, Reqdo Construtora Marimbondo Ltda., Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "27-09-2025",
+        "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 17/09/2025."
+      },
+      "andamentos": [
+        {
+          "data": "04-12-2025",
+          "descricao": "Trânsito em Julgado às partes - Proc. em Andamento Certidão - Trânsito em Julgado"
+        },
+        {
+          "data": "27-09-2025",
+          "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 17/09/2025."
+        }
+      ]
+    },
+    {
+      "cnj": "1000766-38.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001280",
+      "parte": "N/A",
+      "partes_processo": "Reqte Wilson Antonio Scota, Reqdo Construtora Marimbondo Ltda., Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "03-10-2025",
+        "descricao": "Expedido Certidão Transito com V.O (monocrática)"
+      },
+      "andamentos": [
+        {
+          "data": "04-12-2025",
+          "descricao": "Trânsito em Julgado às partes - Proc. em Andamento Certidão - Trânsito em Julgado"
+        },
+        {
+          "data": "03-10-2025",
+          "descricao": "Expedido Certidão Transito com V.O (monocrática)"
+        }
+      ]
+    },
+    {
+      "cnj": "0001065-68.2024.8.26.0073",
+      "status": "andamento",
+      "pasta": "P001286",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Val Paraiso Empreendimentos Imobiliarios Ltda., Exectdo Luciano José Menghini",
+      "origem": "Foro de Avaré - 2ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "04-12-2025",
+        "descricao": "Certidão de Publicação Expedida Relação: 1726/2025_x000D_\nData da Publicação: 05/12/2025"
+      },
+      "andamentos": [
+        {
+          "data": "04-12-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 1726/2025_x000D_\nData da Publicação: 05/12/2025"
+        }
+      ]
+    },
+    {
+      "cnj": "1064673-13.2022.8.26.0002",
+      "status": "andamento",
+      "pasta": "P001242",
+      "parte": "N/A",
+      "partes_processo": "Reqte Gerson Edmundo Menghini, Reqdo Andreia Branca Menghini, Perito Fernando Costa Junior",
+      "origem": "Foro Regional II - Santo Amaro - 5ª Vara da Família e Sucessões",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "04-12-2025",
+        "descricao": "Conclusos para Despacho"
+      },
+      "andamentos": [
+        {
+          "data": "04-12-2025",
+          "descricao": "Conclusos para Despacho"
+        }
+      ]
+    },
+    {
+      "cnj": "1000394-89.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001254",
+      "parte": "N/A",
+      "partes_processo": "Apte/Apda: Josiane Oliveira Hesiquel, Apdo/Apte: Construtora Marimbondo Ltda.",
+      "origem": "36ª Câmara de Direito Privado - Apelação Cível",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "05-05-2025",
+        "descricao": "Documento Juntado"
+      },
+      "andamentos": [
+        {
+          "data": "03-12-2025",
+          "descricao": "Expedido Termo Termo de Juntada - Automática"
+        },
+        {
+          "data": "05-05-2025",
+          "descricao": "Documento Juntado"
+        }
+      ]
+    },
+    {
+      "cnj": "2223759-04.2025.8.26.0000",
+      "status": "andamento",
+      "pasta": "P001287",
+      "parte": "N/A",
+      "partes_processo": "Agravante: Val Paraiso Empreendimentos Imobiliarios Ltda, Agravado: Luciano Jose Menghini",
+      "origem": "29ª Câmara de Direito Privado - Agravo de Instrumento",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "03-12-2025",
+        "descricao": "Alteração de relator em cumprimento a despacho Magistrado de origem: Vaga - 4 / César Augusto Fernandes_x000D__x000D_Área de atuação do magistrado (origem): Ambas_x000D_Magistrado de destino: Vaga - 4 / Hertha Helena de Oliveira_x000D_Área de atuação do magistrado (destino): Ambas_x000D_Motivo: Dje de 27/11/2025:  PERMUTA solicitada pelo Desembargador CARLOS HENRIQUE MIGUEL TREVISAN (aposentado), com assento na 29ª Câmara de Direito Privado, e pela Desembargadora HERTHA HELENA ROLLEMBERG PADILHA DE OLIVEIRA, com assento na 24ª Câmara de Direito Privado, com efeitos a partir de 26/11/2025._x000D_\n(m356936)"
+      },
+      "andamentos": [
+        {
+          "data": "03-12-2025",
+          "descricao": "Alteração de relator em cumprimento a despacho Magistrado de origem: Vaga - 4 / César Augusto Fernandes_x000D__x000D_Área de atuação do magistrado (origem): Ambas_x000D_Magistrado de destino: Vaga - 4 / Hertha Helena de Oliveira_x000D_Área de atuação do magistrado (destino): Ambas_x000D_Motivo: Dje de 27/11/2025:  PERMUTA solicitada pelo Desembargador CARLOS HENRIQUE MIGUEL TREVISAN (aposentado), com assento na 29ª Câmara de Direito Privado, e pela Desembargadora HERTHA HELENA ROLLEMBERG PADILHA DE OLIVEIRA, com assento na 24ª Câmara de Direito Privado, com efeitos a partir de 26/11/2025._x000D_\n(m356936)"
+        }
+      ]
+    },
+    {
+      "cnj": "0005341-07.2008.8.26.0655",
+      "status": "andamento",
+      "pasta": "P000203",
+      "parte": "N/A",
+      "partes_processo": "Reqte Construtora Marimbondo Ltda, Reqdo Durvalino Roque Aizza",
+      "origem": "Foro de Várzea Paulista - 2ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "03-12-2025",
+        "descricao": "Arquivado Definitivamente"
+      },
+      "andamentos": [
+        {
+          "data": "03-12-2025",
+          "descricao": "Arquivado Definitivamente"
+        }
+      ]
+    },
+    {
+      "cnj": "1001160-45.2022.8.26.0431",
+      "status": "espera",
+      "pasta": "P001276",
+      "parte": "N/A",
+      "partes_processo": "Reqte Jose Roberto Bilancieri Rodrigues, Reqdo Construtora Marimbondo Ltda, Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "01-12-2025",
+        "descricao": "Certidão de Publicação Expedida Relação: 1671/2025_x000D_\nData da Publicação: 02/12/2025"
+      },
+      "andamentos": [
+        {
+          "data": "01-12-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 1671/2025_x000D_\nData da Publicação: 02/12/2025"
+        }
+      ]
+    },
+    {
+      "cnj": "1002924-49.2017.8.26.0655",
+      "status": "espera",
+      "pasta": "P000203Mp",
+      "parte": "N/A",
+      "partes_processo": "Reqte Ministério Público do Estado de São Paulo, Reqdo Eduardo Tadeu Pereira",
+      "origem": "Foro de Várzea Paulista - 2ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "01-12-2025",
+        "descricao": "Certidão de Publicação Expedida Relação: 2016/2025_x000D_\nData da Publicação: 02/12/2025"
+      },
+      "andamentos": [
+        {
+          "data": "01-12-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 2016/2025_x000D_\nData da Publicação: 02/12/2025"
+        }
+      ]
+    },
+    {
+      "cnj": "1001343-16.2022.8.26.0431",
+      "status": "espera",
+      "pasta": "P001281",
+      "parte": "N/A",
+      "partes_processo": "Reqte Paulo Eduardo Ribeiro, Reqdo Construtora Marimbondo Ltda, Perito Alfredo Lopes Saab",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "28-11-2025",
+        "descricao": "Petição Juntada Nº Protocolo: WPDR.25.70037597-4_x000D_\nTipo da Petição: Petições Diversas_x000D_\nData: 28/11/2025 13:39"
+      },
+      "andamentos": [
+        {
+          "data": "28-11-2025",
+          "descricao": "Petição Juntada Nº Protocolo: WPDR.25.70037597-4_x000D_\nTipo da Petição: Petições Diversas_x000D_\nData: 28/11/2025 13:39"
+        }
+      ]
+    },
+    {
+      "cnj": "1000393-07.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001253",
+      "parte": "N/A",
+      "partes_processo": "Apte/Apdo: Fabiano Vieira Arruda, Apdo/Apte: Construtora Marimbondo Ltda.",
+      "origem": "5ª Câmara de Direito Privado - Apelação Cível",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "11-11-2025",
+        "descricao": "Certidão de Cartório Expedida Certidão - Remessa dos Autos à 2ª Instância - Art. 102 - NSCGJ"
+      },
+      "andamentos": [
+        {
+          "data": "28-11-2025",
+          "descricao": "Processo encaminhado para o Magistrado"
+        },
+        {
+          "data": "11-11-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão - Remessa dos Autos à 2ª Instância - Art. 102 - NSCGJ"
+        }
+      ]
+    },
+    {
+      "cnj": "1010657-52.2015.8.26.0068",
+      "status": "espera",
+      "pasta": "P000106",
+      "parte": "Gerson Edmundo Menghin",
+      "partes_processo": "Exeqte Sociedade Aldeia da Serra Residencial Morada dos Pássaros, Exectdo Alexandre Muradas Ruffo, ArremTerc Walter Alves Manfredini, Interesdo. Cid Carlos de Freitas, TerIntCer Fundação Armando Alvares Penteado",
+      "origem": "Foro de Barueri - 2ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "25-11-2025",
+        "descricao": "Petição Juntada Nº Protocolo: WBRE.25.70289559-2_x000D_\nTipo da Petição: Petições Diversas_x000D_\nData: 25/11/2025 14:38"
+      },
+      "andamentos": [
+        {
+          "data": "25-11-2025",
+          "descricao": "Petição Juntada Nº Protocolo: WBRE.25.70289559-2_x000D_\nTipo da Petição: Petições Diversas_x000D_\nData: 25/11/2025 14:38"
+        }
+      ]
+    },
+    {
+      "cnj": "1000395-74.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001255",
+      "parte": "N/A",
+      "partes_processo": "Reqte Marcio Alves, Reqdo Construtora Marimbondo Ltda, Perito Luiz Carlos Espanhol",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "03-07-2025",
+        "descricao": "Trânsito em julgado Certifico que o v. acórdão transitou em julgado em 28.06.2025."
+      },
+      "andamentos": [
+        {
+          "data": "24-11-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Inexistência de Custas e Arquivamento - Cível - 61615"
+        },
+        {
+          "data": "03-07-2025",
+          "descricao": "Trânsito em julgado Certifico que o v. acórdão transitou em julgado em 28.06.2025."
+        }
+      ]
+    },
+    {
+      "cnj": "0001151-78.2020.8.26.0655",
+      "status": "espera",
+      "pasta": "P000203",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Construtora Marimbondo Ltda, Exectdo Durvalino Roque Aizza",
+      "origem": "Foro de Várzea Paulista - 2ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "24-11-2025",
+        "descricao": "Pedido de Liminar/Tutela Antecipada Juntado Nº Protocolo: WVPT.25.70062696-9_x000D_\nTipo da Petição: Pedido de Liminar/Antecipação de Tutela_x000D_\nData: 24/11/2025 09:12"
+      },
+      "andamentos": [
+        {
+          "data": "24-11-2025",
+          "descricao": "Pedido de Liminar/Tutela Antecipada Juntado Nº Protocolo: WVPT.25.70062696-9_x000D_\nTipo da Petição: Pedido de Liminar/Antecipação de Tutela_x000D_\nData: 24/11/2025 09:12"
+        }
+      ]
+    },
+    {
+      "cnj": "1002131-15.2015.8.26.0095",
+      "status": "espera",
+      "pasta": "P001197",
+      "parte": "N/A",
+      "partes_processo": "Reqte Pedro Henrique Fabiano Neto, Reqdo Prefeitura Municpal de Torrinha",
+      "origem": "Foro de Brotas - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "20-11-2025",
+        "descricao": "Petição Juntada Nº Protocolo: WBRO.25.70024711-9_x000D_\nTipo da Petição: Petição Intermediária_x000D_\nData: 20/11/2025 09:27"
+      },
+      "andamentos": [
+        {
+          "data": "20-11-2025",
+          "descricao": "Petição Juntada Nº Protocolo: WBRO.25.70024711-9_x000D_\nTipo da Petição: Petição Intermediária_x000D_\nData: 20/11/2025 09:27"
+        }
+      ]
+    },
+    {
+      "cnj": "1005020-33.2024.8.26.0286",
+      "status": "novo",
+      "pasta": "P001301",
+      "parte": "N/A",
+      "partes_processo": "Reqte Ana Carolina da Silva, Reqdo Borborema Empreendimentos Imobiliários Ltda",
+      "origem": "Foro de Itu - 3ª Vara Cível",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "02-10-2025",
+        "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 19/09/2025."
+      },
+      "andamentos": [
+        {
+          "data": "18-11-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Inexistência de Custas e Arquivamento - Cível - 61615"
+        },
+        {
+          "data": "02-10-2025",
+          "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 19/09/2025."
+        }
+      ]
+    },
+    {
+      "cnj": "0007229-31.2005.8.26.0068",
+      "status": "espera",
+      "pasta": "P000106",
+      "parte": "Marcos Momo",
+      "partes_processo": "Reqte Cid Carlos de Freitas, Reqdo Aquilino Ernesto Tito Yanez Pujol",
+      "origem": "Foro de Barueri - 6ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "17-11-2025",
+        "descricao": "Ofício Juntado"
+      },
+      "andamentos": [
+        {
+          "data": "17-11-2025",
+          "descricao": "Ofício Juntado"
+        }
+      ]
+    },
+    {
+      "cnj": "1001813-47.2022.8.26.0431",
+      "status": "espera",
+      "pasta": "P001284",
+      "parte": "N/A",
+      "partes_processo": "Reqte Danilo Fernando Souza, Reqdo Construtora Marimbondo Ltda, Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "12-11-2025",
+        "descricao": "Ato Ordinatório - Intimação - Portal OFÍCIO DEFENSORIA - FL. 384."
+      },
+      "andamentos": [
+        {
+          "data": "12-11-2025",
+          "descricao": "Ato Ordinatório - Intimação - Portal OFÍCIO DEFENSORIA - FL. 384."
+        }
+      ]
+    },
+    {
+      "cnj": "1000832-18.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001268",
+      "parte": "N/A",
+      "partes_processo": "Apte/Apdo: Marcos Roberto Silva, Apdo/Apte: Construtora Marimbondo Ltda.",
+      "origem": "1ª Câmara de Direito Privado - Apelação Cível",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "06-03-2025",
+        "descricao": "Certidão de Cartório Expedida Certidão - Remessa dos Autos à 2ª Instância - Art. 102 - NSCGJ"
+      },
+      "andamentos": [
+        {
+          "data": "10-11-2025",
+          "descricao": "Expedido Termo Termo de Juntada - Automática"
+        },
+        {
+          "data": "06-03-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão - Remessa dos Autos à 2ª Instância - Art. 102 - NSCGJ"
+        }
+      ]
+    },
+    {
+      "cnj": "1000262-61.2024.8.26.0431",
+      "status": "novo",
+      "pasta": "P001297",
+      "parte": "N/A",
+      "partes_processo": "Reqte Luís Carlos Carvalho Firmino, Reqdo Construtora Marimbondo Ltda., Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "30-10-2025",
+        "descricao": "Conclusos para Sentença"
+      },
+      "andamentos": [
+        {
+          "data": "30-10-2025",
+          "descricao": "Conclusos para Sentença"
+        }
+      ]
+    },
+    {
+      "cnj": "0001002-02.2025.8.26.0431",
+      "status": "novo",
+      "pasta": "P001277",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Roni Kleber de Freitas, Exectdo Construtora Marimbondo Ltda",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "29-10-2025",
+        "descricao": "Conclusos para Decisão"
+      },
+      "andamentos": [
+        {
+          "data": "29-10-2025",
+          "descricao": "Conclusos para Decisão"
+        }
+      ]
+    },
+    {
+      "cnj": "1001244-46.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001277",
+      "parte": "N/A",
+      "partes_processo": "Reqte Roni Kleber de Freitas, Reqdo Construtora Marimbondo Ltda, Perito LUIZ CARLOS ESPANHOL, Assistente Leandro Campanhã Camara",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "30-06-2025",
+        "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 14/06/2025"
+      },
+      "andamentos": [
+        {
+          "data": "28-10-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+        },
+        {
+          "data": "30-06-2025",
+          "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 14/06/2025"
+        }
+      ]
+    },
+    {
+      "cnj": "1000564-34.2023.8.26.0073",
+      "status": "novo",
+      "pasta": "P001287",
+      "parte": "N/A",
+      "partes_processo": "Reqte Val Paraiso Empreendimentos Imobiliários Ltda., Reconvinte Luciano José Menghini, Reqdo Luciano José Menghini, Reconvindo Val Paraiso Empreendimentos Imobiliários Ltda.",
+      "origem": "Foro de Avaré - 1ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "17-10-2025",
+        "descricao": "Autos no Prazo"
+      },
+      "andamentos": [
+        {
+          "data": "17-10-2025",
+          "descricao": "Autos no Prazo"
+        }
+      ]
+    },
+    {
+      "cnj": "1000823-56.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001264",
+      "parte": "N/A",
+      "partes_processo": "Apte/Apdo: Claudio Marcio Fernandes, Apdo/Apte: Construtora Marimbondo Ltda.",
+      "origem": "9ª Câmara de Direito Privado - Apelação Cível",
+      "total_andamentos": 3,
+      "ultimo_andamento": {
+        "data": "24-04-2025",
+        "descricao": "Certidão de Cartório Expedida Certidão - Genérica"
+      },
+      "andamentos": [
+        {
+          "data": "16-10-2025",
+          "descricao": "Processo encaminhado para a Coordenadoria da Seção"
+        },
+        {
+          "data": "20-08-2025",
+          "descricao": "Subprocesso Unificado ao Principal"
+        },
+        {
+          "data": "24-04-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão - Genérica"
+        }
+      ]
+    },
+    {
+      "cnj": "0000216-37.2024.8.26.0319",
+      "status": "novo",
+      "pasta": "P001239",
+      "parte": "N/A",
+      "partes_processo": "Reqte Condominio Residencial Jacarandá, Reqdo Construtora Marimbondo Ltda",
+      "origem": "Foro de Lençóis Paulista - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "12-10-2025",
+        "descricao": "Suspensão do Prazo Prazo referente ao usuário foi alterado para 17/11/2025 devido à alteração da tabela de feriados"
+      },
+      "andamentos": [
+        {
+          "data": "12-10-2025",
+          "descricao": "Suspensão do Prazo Prazo referente ao usuário foi alterado para 17/11/2025 devido à alteração da tabela de feriados"
+        }
+      ]
+    },
+    {
+      "cnj": "1010877-57.2025.8.26.0405",
+      "status": "novo",
+      "pasta": "P001311",
+      "parte": "N/A",
+      "partes_processo": "Reqte Manoel Severino Felix da Silva, Reqdo Borborema Empreendimentos Imobiliários Ltda",
+      "origem": "Foro de Osasco - 5ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "07-10-2025",
+        "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Inexistência de Custas e Arquivamento - Cível - 61615"
+      },
+      "andamentos": [
+        {
+          "data": "07-10-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Inexistência de Custas e Arquivamento - Cível - 61615"
+        }
+      ]
+    },
+    {
+      "cnj": "1002234-66.2024.8.26.0431",
+      "status": "novo",
+      "pasta": "P001304",
+      "parte": "N/A",
+      "partes_processo": "Reqte Mario Wilson Teodoro, Reqdo Construtora Marimbondo Ltda., Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "03-10-2025",
+        "descricao": "Documento Juntado"
+      },
+      "andamentos": [
+        {
+          "data": "03-10-2025",
+          "descricao": "Documento Juntado"
+        }
+      ]
+    },
+    {
+      "cnj": "1004869-67.2024.8.26.0286",
+      "status": "novo",
+      "pasta": "P001302",
+      "parte": "N/A",
+      "partes_processo": "Reqte Flávia Alves da Silva Barboza, Reconvinte Borborema Empreendimentos Imobiliários Ltda, Reqdo Borborema Empreendimentos Imobiliários Ltda, Reconvinda Flávia Alves da Silva Barboza",
+      "origem": "Foro de Itu - 1ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "03-10-2025",
+        "descricao": "Certidão de Trânsito em Julgado com Baixa Expedida Certidão - Trânsito em Julgado com Baixa - Processo Digital"
+      },
+      "andamentos": [
+        {
+          "data": "03-10-2025",
+          "descricao": "Certidão de Trânsito em Julgado com Baixa Expedida Certidão - Trânsito em Julgado com Baixa - Processo Digital"
+        }
+      ]
+    },
+    {
+      "cnj": "1000537-78.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001261",
+      "parte": "N/A",
+      "partes_processo": "Reqte Giseli Cristina Ferreira, Reqdo Construtora Marimbondo Ltda., Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "09-06-2025",
+        "descricao": "Trânsito em julgado Certifico que o v. acórdão transitou em julgado em 03/06/2025."
+      },
+      "andamentos": [
+        {
+          "data": "28-09-2025",
+          "descricao": "Suspensão do Prazo Prazo referente ao usuário foi alterado para 17/12/2025 devido à alteração da tabela de feriados"
+        },
+        {
+          "data": "09-06-2025",
+          "descricao": "Trânsito em julgado Certifico que o v. acórdão transitou em julgado em 03/06/2025."
+        }
+      ]
+    },
+    {
+      "cnj": "0000217-74.2024.8.26.0431",
+      "status": "novo",
+      "pasta": "P001245",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Osvaldo Quartaroli Junior, Exectdo Construtora Marimbondo Ltda",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "28-09-2025",
+        "descricao": "Suspensão do Prazo Prazo referente ao usuário foi alterado para 17/12/2025 devido à alteração da tabela de feriados"
+      },
+      "andamentos": [
+        {
+          "data": "28-09-2025",
+          "descricao": "Suspensão do Prazo Prazo referente ao usuário foi alterado para 17/12/2025 devido à alteração da tabela de feriados"
+        }
+      ]
+    },
+    {
+      "cnj": "0004673-56.2024.8.26.0079",
+      "status": "novo",
+      "pasta": "P001224",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Giseli Verônica Pires, Exectdo Construtora Marimbondo Ltda.",
+      "origem": "Foro de Botucatu - 2ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "25-09-2025",
+        "descricao": "Documento Juntado"
+      },
+      "andamentos": [
+        {
+          "data": "25-09-2025",
+          "descricao": "Documento Juntado"
+        }
+      ]
+    },
+    {
+      "cnj": "1000479-75.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001259",
+      "parte": "N/A",
+      "partes_processo": "Reqte Edna Aparecida Ezau, Reqdo Construtora Marimbondo Ltda., Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "31-05-2025",
+        "descricao": "Baixa Definitiva"
+      },
+      "andamentos": [
+        {
+          "data": "24-09-2025",
+          "descricao": "Certidão de Cartório Expedida Certifico e dou fé que, após compulsar os presentes autos, verifiquei constar às fls. (345/347) o(s) comprovante(s) do pagamento integral das CUSTAS devidas e procedi ao seu arquivamento definitivo."
+        },
+        {
+          "data": "31-05-2025",
+          "descricao": "Baixa Definitiva"
+        }
+      ]
+    },
+    {
+      "cnj": "1005532-16.2024.8.26.0286",
+      "status": "novo",
+      "pasta": "P001300",
+      "parte": "N/A",
+      "partes_processo": "Reqte Borborema Empreendimentos Imobiliários Ltda., Reqda Flávia Alves da Silva Barboza",
+      "origem": "Foro de Itu - 1ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "12-09-2025",
+        "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+      },
+      "andamentos": [
+        {
+          "data": "12-09-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+        }
+      ]
+    },
+    {
+      "cnj": "1001538-37.2024.8.26.0073",
+      "status": "novo",
+      "pasta": "P001299",
+      "parte": "N/A",
+      "partes_processo": "Herdeiro Luciano José Menghini,, Reqdo Thea Empreendimentos Imobiliarios S/c Ltda",
+      "origem": "Foro de Avaré - 1ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "05-09-2025",
+        "descricao": "Certidão de Publicação Expedida Relação: 1135/2025_x000D_\nData da Publicação: 08/09/2025"
+      },
+      "andamentos": [
+        {
+          "data": "05-09-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 1135/2025_x000D_\nData da Publicação: 08/09/2025"
+        }
+      ]
+    },
+    {
+      "cnj": "0003199-50.2025.8.26.0003",
+      "status": "novo",
+      "pasta": "P002128",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Danilo Calhado Rodrigues, Exectdo Darlan Carneiro da Silva",
+      "origem": "Foro Regional III - Jabaquara - 1ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "27-08-2025",
+        "descricao": "Certidão de Publicação Expedida Relação: 1509/2025_x000D_\nData da Publicação: 28/08/2025"
+      },
+      "andamentos": [
+        {
+          "data": "27-08-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 1509/2025_x000D_\nData da Publicação: 28/08/2025"
+        }
+      ]
+    },
+    {
+      "cnj": "1503425-44.2021.8.26.0286",
+      "status": "novo",
+      "pasta": "ExecFiscal",
+      "parte": "Elianka Empreendimentos Imobiliarios",
+      "partes_processo": "Exeqte Município de Itu, Exectdo Boncompagni Empreendimentos Imobiliários Ltda",
+      "origem": "Foro de Itu - SAF - Serviço de Anexo Fiscal",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "20-08-2025",
+        "descricao": "Petição Juntada Nº Protocolo: WITU.25.80032814-5_x000D_\nTipo da Petição: Petições Diversas_x000D_\nData: 20/08/2025 16:56"
+      },
+      "andamentos": [
+        {
+          "data": "20-08-2025",
+          "descricao": "Petição Juntada Nº Protocolo: WITU.25.80032814-5_x000D_\nTipo da Petição: Petições Diversas_x000D_\nData: 20/08/2025 16:56"
+        }
+      ]
+    },
+    {
+      "cnj": "1500764-72.2018.8.26.0068",
+      "status": "novo",
+      "pasta": "DivAtiva",
+      "parte": "Val Paraiso Empreendimentos",
+      "partes_processo": "Exeqte PREFEITURA MUNICIPAL DE BARUERI, Exectdo Cid Carlos de Freitas",
+      "origem": "Foro de Barueri - Vara da Fazenda Pública",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "18-08-2025",
+        "descricao": "Ofício Expedido Ofício - Cancelamento da Certidão de Inscrição da Dívida - Taxa Judiciária - Comunicação Eletrônica PGE"
+      },
+      "andamentos": [
+        {
+          "data": "18-08-2025",
+          "descricao": "Ofício Expedido Ofício - Cancelamento da Certidão de Inscrição da Dívida - Taxa Judiciária - Comunicação Eletrônica PGE"
+        }
+      ]
+    },
+    {
+      "cnj": "1000470-98.2022.8.26.0145",
+      "status": "novo",
+      "pasta": "P001288",
+      "parte": "N/A",
+      "partes_processo": "Reqte Cia de Saneamento Básico do Estado de São Paulo - SABESP, Reqdo Tapera Grande Empreendimentos Imobiliários Ltda, Perito Walmir Pereira Modotti",
+      "origem": "Foro de Conchas - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "14-08-2025",
+        "descricao": "Certidão de Publicação Expedida Relação: 0866/2025_x000D_\nData da Publicação: 15/08/2025"
+      },
+      "andamentos": [
+        {
+          "data": "14-08-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 0866/2025_x000D_\nData da Publicação: 15/08/2025"
+        }
+      ]
+    },
+    {
+      "cnj": "1001050-46.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001271",
+      "parte": "N/A",
+      "partes_processo": "Reqte Wagner Roberto Gaioto Mariano, Reqdo Construtora Marimbondo Ltda, Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "25-04-2025",
+        "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 12/04/2025."
+      },
+      "andamentos": [
+        {
+          "data": "13-08-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+        },
+        {
+          "data": "25-04-2025",
+          "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 12/04/2025."
+        }
+      ]
+    },
+    {
+      "cnj": "1000643-40.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001263",
+      "parte": "N/A",
+      "partes_processo": "Reqte Patrícia Luccas, Reqdo Construtora Marimbondo Ltda., Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "28-05-2025",
+        "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 20 de maio de 2025."
+      },
+      "andamentos": [
+        {
+          "data": "13-08-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+        },
+        {
+          "data": "28-05-2025",
+          "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 20 de maio de 2025."
+        }
+      ]
+    },
+    {
+      "cnj": "1033309-83.2023.8.26.0003",
+      "status": "novo",
+      "pasta": "P002128",
+      "parte": "N/A",
+      "partes_processo": "Reqte Darlan Carneiro da Silva, Reqdo Washington Martins Ferreira Bento",
+      "origem": "Foro Regional III - Jabaquara - 1ª Vara Cível",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "17-02-2025",
+        "descricao": "Trânsito em julgado Certifico que o v. acórdão transitou em julgado em 13/02/2025."
+      },
+      "andamentos": [
+        {
+          "data": "12-08-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+        },
+        {
+          "data": "17-02-2025",
+          "descricao": "Trânsito em julgado Certifico que o v. acórdão transitou em julgado em 13/02/2025."
+        }
+      ]
+    },
+    {
+      "cnj": "0043808-80.2022.8.26.0100",
+      "status": "novo",
+      "pasta": "P001266",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Karina Coe Razuk, Exectdo Omar Antonio Caraballo da Oca",
+      "origem": "Foro Central Cível - 42ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "30-07-2025",
+        "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+      },
+      "andamentos": [
+        {
+          "data": "30-07-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+        }
+      ]
+    },
+    {
+      "cnj": "1001835-79.2021.8.26.0063",
+      "status": "novo",
+      "pasta": "P001251",
+      "parte": "N/A",
+      "partes_processo": "Reqte Edvaldo Benedito dos Santos, Reqda Marcela Aparecida Luiz",
+      "origem": "Foro de Barra Bonita - 2ª Vara",
+      "total_andamentos": 3,
+      "ultimo_andamento": {
+        "data": "26-03-2025",
+        "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 27 de fevereiro de 2025."
+      },
+      "andamentos": [
+        {
+          "data": "23-07-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Inexistência de Custas e Arquivamento - Cível - 61615"
+        },
+        {
+          "data": "26-03-2025",
+          "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 27 de fevereiro de 2025."
+        },
+        {
+          "data": "26-03-2025",
+          "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 27 de fevereiro de 2025."
+        }
+      ]
+    },
+    {
+      "cnj": "0007490-30.2024.8.26.0003",
+      "status": "novo",
+      "pasta": "P002128",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Darlan Carneiro da Silva, Exectdo Washington Martins Ferreira Bento",
+      "origem": "Foro Regional III - Jabaquara - 1ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "23-07-2025",
+        "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Custas e Arquivamento - Cível - 61614"
+      },
+      "andamentos": [
+        {
+          "data": "23-07-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Custas e Arquivamento - Cível - 61614"
+        }
+      ]
+    },
+    {
+      "cnj": "1001359-67.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001279",
+      "parte": "N/A",
+      "partes_processo": "Reqte Celina Fabricio, Reqdo Construtora Marimbondo Ltda, Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "12-03-2025",
+        "descricao": "Recebidos os Autos do Superior Tribunal de Justiça"
+      },
+      "andamentos": [
+        {
+          "data": "21-07-2025",
+          "descricao": "Certidão de Cartório Expedida Certifico e dou fé que, após compulsar os presentes autos, verifiquei constar às fls. (338/339) o(s) comprovante(s) do pagamento integral das CUSTAS devidas e procedi ao seu arquivamento definitivo."
+        },
+        {
+          "data": "12-03-2025",
+          "descricao": "Recebidos os Autos do Superior Tribunal de Justiça"
+        }
+      ]
+    },
+    {
+      "cnj": "0001089-89.2024.8.26.0431",
+      "status": "novo",
+      "pasta": "P001234",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Tereza de Fatima Gallis, Exectdo Construtora Marimbondo Ltda",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "14-07-2025",
+        "descricao": "Certidão de Cartório Expedida Certifico e dou fé que, após compulsar os presentes autos, verifiquei constar às fls. (67/68) o(s) comprovante(s) do pagamento integral das CUSTAS devidas e procedi ao seu arquivamento definitivo."
+      },
+      "andamentos": [
+        {
+          "data": "14-07-2025",
+          "descricao": "Certidão de Cartório Expedida Certifico e dou fé que, após compulsar os presentes autos, verifiquei constar às fls. (67/68) o(s) comprovante(s) do pagamento integral das CUSTAS devidas e procedi ao seu arquivamento definitivo."
+        }
+      ]
+    },
+    {
+      "cnj": "0004291-63.2024.8.26.0079",
+      "status": "novo",
+      "pasta": "P001224",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Terezinha de Fatima Silva, Exectdo Construtora Marimbondo Ltda",
+      "origem": "Foro de Botucatu - 2ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "09-06-2025",
+        "descricao": "Certidão de Trânsito em Julgado com Baixa Expedida (R) Certidão automática - trânsito em julgado com arquivamento (já com a movimentação)"
+      },
+      "andamentos": [
+        {
+          "data": "09-06-2025",
+          "descricao": "Certidão de Trânsito em Julgado com Baixa Expedida (R) Certidão automática - trânsito em julgado com arquivamento (já com a movimentação)"
+        }
+      ]
+    },
+    {
+      "cnj": "2366575-43.2024.8.26.0000",
+      "status": "novo",
+      "pasta": "P001245",
+      "parte": "N/A",
+      "partes_processo": "Agravante: Construtora Marimbondo Ltda., Agravado: Osvaldo Quartaroli Junior",
+      "origem": "7ª Câmara de Direito Privado - Agravo de Instrumento",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "30-05-2025",
+        "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 29/04/2025."
+      },
+      "andamentos": [
+        {
+          "data": "30-05-2025",
+          "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 29/04/2025."
+        },
+        {
+          "data": "30-05-2025",
+          "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 29/04/2025."
+        }
+      ]
+    },
+    {
+      "cnj": "1000883-63.2021.8.26.0431",
+      "status": "novo",
+      "pasta": "P001246",
+      "parte": "N/A",
+      "partes_processo": "Reqte Flavio Rodrigo Mariano Pagan, Reqdo Construtora Marimbondo Ltda, Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "07-04-2025",
+        "descricao": "Expedido Certidão Certifico que, ante a petição de fls. 407/410 (comprovante de depósito), o v. acórdão transitou em julgado em 07/04/2025. Nada mais."
+      },
+      "andamentos": [
+        {
+          "data": "23-05-2025",
+          "descricao": "Arquivado Definitivamente Movimentação lançada de forma automática, nos termos do Comunicado Conjunto nº 385/2025."
+        },
+        {
+          "data": "07-04-2025",
+          "descricao": "Expedido Certidão Certifico que, ante a petição de fls. 407/410 (comprovante de depósito), o v. acórdão transitou em julgado em 07/04/2025. Nada mais."
+        }
+      ]
+    },
+    {
+      "cnj": "1000478-90.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001258",
+      "parte": "N/A",
+      "partes_processo": "Reqte Fábio Fernando de Oliveira Reis, Reqdo Construtora Marimbondo Ltda., Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "23-05-2025",
+        "descricao": "Arquivado Definitivamente Movimentação lançada de forma automática, nos termos do Comunicado Conjunto nº 385/2025."
+      },
+      "andamentos": [
+        {
+          "data": "23-05-2025",
+          "descricao": "Arquivado Definitivamente Movimentação lançada de forma automática, nos termos do Comunicado Conjunto nº 385/2025."
+        }
+      ]
+    },
+    {
+      "cnj": "1001816-31.2024.8.26.0431",
+      "status": "novo",
+      "pasta": "P001303",
+      "parte": "N/A",
+      "partes_processo": "Reqte Maicon William Marques, Reqdo Construtora Marimbondo Ltda, Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "20-05-2025",
+        "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Inexistência de Custas e Arquivamento - Cível - 61615"
+      },
+      "andamentos": [
+        {
+          "data": "20-05-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Inexistência de Custas e Arquivamento - Cível - 61615"
+        }
+      ]
+    },
+    {
+      "cnj": "0000271-06.2025.8.26.0431",
+      "status": "novo",
+      "pasta": "P001260",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Estevão Vaz, Exectdo Construtora Marimbondo Ltda.",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "11-05-2025",
+        "descricao": "Suspensão do Prazo Prazo referente ao usuário foi alterado para 28/04/2025 devido à alteração da tabela de feriados"
+      },
+      "andamentos": [
+        {
+          "data": "11-05-2025",
+          "descricao": "Suspensão do Prazo Prazo referente ao usuário foi alterado para 28/04/2025 devido à alteração da tabela de feriados"
+        }
+      ]
+    },
+    {
+      "cnj": "0000067-59.2025.8.26.0431",
+      "status": "novo",
+      "pasta": "P001257",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Maria Aparecida Leme dos Santos, Exectdo Construtora Marimbondo Ltda.",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "22-04-2025",
+        "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Inexistência de Custas e Arquivamento - Cível - 61615"
+      },
+      "andamentos": [
+        {
+          "data": "22-04-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Inexistência de Custas e Arquivamento - Cível - 61615"
+        }
+      ]
+    },
+    {
+      "cnj": "1505268-20.2020.8.26.0079",
+      "status": "novo",
+      "pasta": "Elianka",
+      "parte": "Karina Coe Razuk",
+      "partes_processo": "Exeqte Prefeitura Municipal de Botucatu, Exectda Elianka Empreendimentos Imobiliarios Ltda",
+      "origem": "Foro de Botucatu - SAF - Serviço de Anexo Fiscal",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "09-04-2025",
+        "descricao": "Arquivado Definitivamente"
+      },
+      "andamentos": [
+        {
+          "data": "09-04-2025",
+          "descricao": "Arquivado Definitivamente"
+        }
+      ]
+    },
+    {
+      "cnj": "0058568-63.2024.8.26.0100",
+      "status": "novo",
+      "pasta": "P001266",
+      "parte": "N/A",
+      "partes_processo": "Exeqte de Leo e Paulino Advogados - Sociedade de Advogados, Exectda Karina Coe Razuk",
+      "origem": "Foro Central Cível - 42ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "07-04-2025",
+        "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível- 61614"
+      },
+      "andamentos": [
+        {
+          "data": "07-04-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível- 61614"
+        }
+      ]
+    },
+    {
+      "cnj": "2234434-60.2024.8.26.0000",
+      "status": "novo",
+      "pasta": "P002128ED",
+      "parte": "N/A",
+      "partes_processo": "Agravante: Washington Martins Ferreira Bento, Agravada: Márcia Maria de Oliveira Carneiro",
+      "origem": "29ª Câmara de Direito Privado - Agravo de Instrumento",
+      "total_andamentos": 6,
+      "ultimo_andamento": {
+        "data": "29-11-2024",
+        "descricao": "Subprocesso Unificado ao Principal"
+      },
+      "andamentos": [
+        {
+          "data": "13-02-2025",
+          "descricao": "Publicado em Disponibilizado em 12/02/2025_x000D_\nTipo de publicação: Intimação de Acórdão_x000D_\nNúmero do Diário Eletrônico: 4143"
+        },
+        {
+          "data": "12-02-2025",
+          "descricao": "Expedido Certidão Certidão de Publicação de Acórdão [Digital]"
+        },
+        {
+          "data": "12-02-2025",
+          "descricao": "Expedido Certidão Certidão de Publicação de Acórdão [Digital]"
+        },
+        {
+          "data": "29-11-2024",
+          "descricao": "Expedido Certidão Certifico que há pedido de liminar/tutela antecipada no subprocesso encerrado nesta data."
+        },
+        {
+          "data": "29-11-2024",
+          "descricao": "Subprocesso Unificado ao Principal"
+        }
+      ]
+    },
+    {
+      "cnj": "1000494-44.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001260",
+      "parte": "N/A",
+      "partes_processo": "Reqte Estevão Vaz, Reqdo Construtora Marimbondo Ltda., Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "21-11-2024",
+        "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 09/11/2024"
+      },
+      "andamentos": [
+        {
+          "data": "25-02-2025",
+          "descricao": "Execução/Cumprimento de Sentença Iniciada (o) 0000271-06.2025.8.26.0431 - Cumprimento de sentença"
+        },
+        {
+          "data": "21-11-2024",
+          "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 09/11/2024"
+        }
+      ]
+    },
+    {
+      "cnj": "1000477-08.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001257",
+      "parte": "N/A",
+      "partes_processo": "Reqte Maria Aparecida Leme dos Santos, Reqdo Construtora Marimbondo Ltda., Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "19-12-2024",
+        "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 11/12/2024."
+      },
+      "andamentos": [
+        {
+          "data": "18-02-2025",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+        },
+        {
+          "data": "19-12-2024",
+          "descricao": "Expedido Certidão Certifico que o v. acórdão transitou em julgado em 11/12/2024."
+        }
+      ]
+    },
+    {
+      "cnj": "0061987-67.2019.8.26.0100",
+      "status": "novo",
+      "pasta": "P001229",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Karina Coe Razuk, Exectdo Leida Regina de Oliveira Me, TerIntCer Cleusa Maria de Oliveira, Gestor Marilaine Boreges de Paula",
+      "origem": "Foro Central Cível - 16ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "01-02-2025",
+        "descricao": "Certidão de Publicação Expedida Relação: 0086/2025_x000D_\nData da Publicação: 04/02/2025_x000D_\nNúmero do Diário: 4136"
+      },
+      "andamentos": [
+        {
+          "data": "01-02-2025",
+          "descricao": "Certidão de Publicação Expedida Relação: 0086/2025_x000D_\nData da Publicação: 04/02/2025_x000D_\nNúmero do Diário: 4136"
+        }
+      ]
+    },
+    {
+      "cnj": "1002524-27.2021.8.26.0483",
+      "status": "novo",
+      "pasta": "P001247",
+      "parte": "N/A",
+      "partes_processo": "Reqte Alex Ramos dos Santos, Reqdo Nova Era Loteadora e Urbanismo Ltda",
+      "origem": "Foro de Presidente Venceslau - 2ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "20-01-2025",
+        "descricao": "Remetidos os Autos para o Arquivo Geral – Devolução de Feitos Não Reativados"
+      },
+      "andamentos": [
+        {
+          "data": "20-01-2025",
+          "descricao": "Remetidos os Autos para o Arquivo Geral – Devolução de Feitos Não Reativados"
+        }
+      ]
+    },
+    {
+      "cnj": "2197849-09.2024.8.26.0000",
+      "status": "novo",
+      "pasta": "P001299",
+      "parte": "N/A",
+      "partes_processo": "Agravante: Luciano Jose Menghini, Agravado: Thea Empreendimentos Imobiliários Ltda.",
+      "origem": "28ª Câmara de Direito Privado - Agravo de Instrumento",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "16-01-2025",
+        "descricao": "Trânsito em julgado Transitou em Julgado em 19/12/2024"
+      },
+      "andamentos": [
+        {
+          "data": "16-01-2025",
+          "descricao": "Trânsito em julgado Transitou em Julgado em 19/12/2024"
+        }
+      ]
+    },
+    {
+      "cnj": "1001618-33.2020.8.26.0431",
+      "status": "novo",
+      "pasta": "P001240",
+      "parte": "N/A",
+      "partes_processo": "Reqte Jair Pereira dos Santos, Reqdo Construtora Marimbondo Ltda, Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "19-09-2024",
+        "descricao": "Decisão Digitalizada Sem complemento"
+      },
+      "andamentos": [
+        {
+          "data": "08-01-2025",
+          "descricao": "Certidão de Cartório Expedida Certifico e dou fé que, após compulsar os presentes autos, verifiquei constar às fls. (475/476) o(s) comprovante(s) do pagamento integral das CUSTAS devidas e procedi ao seu arquivamento definitivo."
+        },
+        {
+          "data": "19-09-2024",
+          "descricao": "Decisão Digitalizada Sem complemento"
+        }
+      ]
+    },
+    {
+      "cnj": "1001044-44.2019.8.26.0431",
+      "status": "novo",
+      "pasta": "P001234",
+      "parte": "N/A",
+      "partes_processo": "Reqte Tereza de Fatima Gallis, Reqdo Construtora Marimbondo Ltda, Perito Luiz Carlos Espanhol",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "04-07-2024",
+        "descricao": "Recebidos os Autos do Superior Tribunal de Justiça"
+      },
+      "andamentos": [
+        {
+          "data": "10-12-2024",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+        },
+        {
+          "data": "04-07-2024",
+          "descricao": "Recebidos os Autos do Superior Tribunal de Justiça"
+        }
+      ]
+    },
+    {
+      "cnj": "1001078-14.2022.8.26.0431",
+      "status": "novo",
+      "pasta": "P001272",
+      "parte": "N/A",
+      "partes_processo": "Reqte Jesus de Oliveira Dias, Reqdo Construtora Marimbondo Ltda, Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "10-12-2024",
+        "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Inexistência de Custas e Arquivamento - Cível - 61615"
+      },
+      "andamentos": [
+        {
+          "data": "10-12-2024",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Inexistência de Custas e Arquivamento - Cível - 61615"
+        }
+      ]
+    },
+    {
+      "cnj": "2070747-04.2024.8.26.0000",
+      "status": "novo",
+      "pasta": "P001201",
+      "parte": "N/A",
+      "partes_processo": "Agravante: Construtora Marimbondo Ltda., Agravado: Denilson José dos Santos Garcia",
+      "origem": "6ª Câmara de Direito Privado - Agravo de Instrumento",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "06-12-2024",
+        "descricao": "Recebidos os Autos do Superior Tribunal de Justiça"
+      },
+      "andamentos": [
+        {
+          "data": "06-12-2024",
+          "descricao": "Recebidos os Autos do Superior Tribunal de Justiça"
+        }
+      ]
+    },
+    {
+      "cnj": "1000184-72.2021.8.26.0431",
+      "status": "novo",
+      "pasta": "P001245",
+      "parte": "N/A",
+      "partes_processo": "Reqte Osvaldo Quartaroli Junior, Reqdo Construtora Marimbondo Ltda",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "03-12-2024",
+        "descricao": "Certidão de Publicação Expedida Relação: 0962/2024_x000D_\nData da Publicação: 04/12/2024_x000D_\nNúmero do Diário: 4104"
+      },
+      "andamentos": [
+        {
+          "data": "03-12-2024",
+          "descricao": "Certidão de Publicação Expedida Relação: 0962/2024_x000D_\nData da Publicação: 04/12/2024_x000D_\nNúmero do Diário: 4104"
+        }
+      ]
+    },
+    {
+      "cnj": "0001256-09.2024.8.26.0431",
+      "status": "novo",
+      "pasta": "P001244",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Alexandre Renno Terenciani, Exectdo Construtora Marimbondo Ltda",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "18-11-2024",
+        "descricao": "Trânsito em Julgado às partes - Proc. em Andamento Certifico e dou fé que a r.sentença de fls. 44, transitou em julgado em 22/10/2024."
+      },
+      "andamentos": [
+        {
+          "data": "18-11-2024",
+          "descricao": "Trânsito em Julgado às partes - Proc. em Andamento Certifico e dou fé que a r.sentença de fls. 44, transitou em julgado em 22/10/2024."
+        }
+      ]
+    },
+    {
+      "cnj": "1003851-50.2024.8.26.0079",
+      "status": "novo",
+      "pasta": "Elianka",
+      "parte": "Kleber Giacomini",
+      "partes_processo": "Embargte Elianka Empreendimentos Imobiliarios Ltda, Embargdo MUNICÍPIO DE BOTUCATU",
+      "origem": "Foro de Botucatu - SAF - Serviço de Anexo Fiscal",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "31-10-2024",
+        "descricao": "Certidão de Trânsito em Julgado com Baixa Expedida Trânsito em Julgado com Baixa - Processo Digital"
+      },
+      "andamentos": [
+        {
+          "data": "31-10-2024",
+          "descricao": "Certidão de Trânsito em Julgado com Baixa Expedida Trânsito em Julgado com Baixa - Processo Digital"
+        }
+      ]
+    },
+    {
+      "cnj": "1002269-65.2020.8.26.0431",
+      "status": "novo",
+      "pasta": "P001244",
+      "parte": "N/A",
+      "partes_processo": "Reqte Alexandre Renno Terenciani, Reqdo Construtora Marimbondo Ltda, Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 2,
+      "ultimo_andamento": {
+        "data": "07-08-2024",
+        "descricao": "Recebidos os Autos do Superior Tribunal de Justiça"
+      },
+      "andamentos": [
+        {
+          "data": "29-10-2024",
+          "descricao": "Suspensão do Prazo Prazo referente ao usuário foi alterado para 24/01/2025 devido à alteração da tabela de feriados"
+        },
+        {
+          "data": "07-08-2024",
+          "descricao": "Recebidos os Autos do Superior Tribunal de Justiça"
+        }
+      ]
+    },
+    {
+      "cnj": "0001258-76.2024.8.26.0431",
+      "status": "novo",
+      "pasta": "P001248",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Izael Nunes da Silva, Exectdo Construtora Marimbondo Ltda",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "11-10-2024",
+        "descricao": "Documento Juntado"
+      },
+      "andamentos": [
+        {
+          "data": "11-10-2024",
+          "descricao": "Documento Juntado"
+        }
+      ]
+    },
+    {
+      "cnj": "0001483-78.2023.8.26.0319",
+      "status": "novo",
+      "pasta": "jacaranda",
+      "parte": "Boncompagni Empreendimentos",
+      "partes_processo": "Exeqte Condominio Residencial Jacaranda, Exectdo Construtora Marimbondo Ltda.",
+      "origem": "Foro de Lençóis Paulista - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "10-10-2024",
+        "descricao": "Trânsito em Julgado às partes - Proc. em Andamento Certifico e dou fé que a r. sentença supra transitou em julgado em 12/06/2024."
+      },
+      "andamentos": [
+        {
+          "data": "10-10-2024",
+          "descricao": "Trânsito em Julgado às partes - Proc. em Andamento Certifico e dou fé que a r. sentença supra transitou em julgado em 12/06/2024."
+        }
+      ]
+    },
+    {
+      "cnj": "1001324-15.2019.8.26.0431",
+      "status": "novo",
+      "pasta": "P001233",
+      "parte": "N/A",
+      "partes_processo": "Reqte Antonio Carlos Guerra Paixão, Reqdo Construtora Marimbondo Ltda., Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "02-10-2024",
+        "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+      },
+      "andamentos": [
+        {
+          "data": "02-10-2024",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+        }
+      ]
+    },
+    {
+      "cnj": "1006788-43.2018.8.26.0079",
+      "status": "novo",
+      "pasta": "P001224",
+      "parte": "N/A",
+      "partes_processo": "Reqte Terezinha de Fatima Silva, Reqdo Construtora Marimbondo Ltda, Perito RAFAEL BALDINI DORICO",
+      "origem": "Foro de Botucatu - 2ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "22-08-2024",
+        "descricao": "Execução/Cumprimento de Sentença Iniciada (o) 0004673-56.2024.8.26.0079 - Cumprimento de sentença"
+      },
+      "andamentos": [
+        {
+          "data": "22-08-2024",
+          "descricao": "Execução/Cumprimento de Sentença Iniciada (o) 0004673-56.2024.8.26.0079 - Cumprimento de sentença"
+        }
+      ]
+    },
+    {
+      "cnj": "2096219-41.2023.8.26.0000",
+      "status": "novo",
+      "pasta": "P001266",
+      "parte": "N/A",
+      "partes_processo": "Agravante: KARINA COE RAZUK, Agravado: OMAR ANTONIO CARABALLO MONTES DA OCA",
+      "origem": "30ª Câmara de Direito Privado - Agravo de Instrumento",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "08-08-2024",
+        "descricao": "Recebidos os Autos do Superior Tribunal de Justiça"
+      },
+      "andamentos": [
+        {
+          "data": "08-08-2024",
+          "descricao": "Recebidos os Autos do Superior Tribunal de Justiça"
+        }
+      ]
+    },
+    {
+      "cnj": "1002345-37.2020.8.26.0319",
+      "status": "novo",
+      "pasta": "P001238",
+      "parte": "N/A",
+      "partes_processo": "Reqte Construtora Marimbondo Ltda., Reqdo Condominio Residencial Jacaranda",
+      "origem": "Foro de Lençóis Paulista - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "27-07-2024",
+        "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+      },
+      "andamentos": [
+        {
+          "data": "27-07-2024",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+        }
+      ]
+    },
+    {
+      "cnj": "1004151-05.2023.8.26.0319",
+      "status": "novo",
+      "pasta": "P001293",
+      "parte": "N/A",
+      "partes_processo": "Exeqte Boncompagni Empreendimentos Imobiliários Ltda., Exectdo Jacuba Cursos Pré-vestibulares e Business Ltda. e Outros",
+      "origem": "Foro de Lençóis Paulista - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "26-06-2024",
+        "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+      },
+      "andamentos": [
+        {
+          "data": "26-06-2024",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+        }
+      ]
+    },
+    {
+      "cnj": "1002220-24.2020.8.26.0431",
+      "status": "novo",
+      "pasta": "P001248",
+      "parte": "N/A",
+      "partes_processo": "Apelante: Construtora Marimbondo Ltda., Apelado: Izael Nunes da Silva",
+      "origem": "10ª Câmara de Direito Privado - Apelação Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "19-06-2024",
+        "descricao": "Baixa Definitiva"
+      },
+      "andamentos": [
+        {
+          "data": "19-06-2024",
+          "descricao": "Baixa Definitiva"
+        }
+      ]
+    },
+    {
+      "cnj": "1003238-39.2019.8.26.0068",
+      "status": "novo",
+      "pasta": "P000106",
+      "parte": "N/A",
+      "partes_processo": "Embargte Aquilino Ernesto Tito Yanez Pujol, Embargdo Cid Carlos de Freitas",
+      "origem": "Foro de Barueri - 6ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "02-06-2024",
+        "descricao": "Petição Juntada Nº Protocolo: WBRE.24.70111073-6_x000D_\nTipo da Petição: Petição Intermediária_x000D_\nData: 02/06/2024 08:14"
+      },
+      "andamentos": [
+        {
+          "data": "02-06-2024",
+          "descricao": "Petição Juntada Nº Protocolo: WBRE.24.70111073-6_x000D_\nTipo da Petição: Petição Intermediária_x000D_\nData: 02/06/2024 08:14"
+        }
+      ]
+    },
+    {
+      "cnj": "1002301-18.2020.8.26.0319",
+      "status": "novo",
+      "pasta": "P001239",
+      "parte": "N/A",
+      "partes_processo": "Reqte Condominio Residencial Jacarandá, Reqdo Construtora Marimbondo Ltda, Confte Tabular Renato Trecenti, Interesda. Fazenda Pública do Estado de São Paulo",
+      "origem": "Foro de Lençóis Paulista - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "05-02-2024",
+        "descricao": "Execução/Cumprimento de Sentença Iniciada (o) 0000216-37.2024.8.26.0319 - Cumprimento Provisório de Sentença"
+      },
+      "andamentos": [
+        {
+          "data": "05-02-2024",
+          "descricao": "Execução/Cumprimento de Sentença Iniciada (o) 0000216-37.2024.8.26.0319 - Cumprimento Provisório de Sentença"
+        }
+      ]
+    },
+    {
+      "cnj": "1000095-60.2022.8.26.0319",
+      "status": "novo",
+      "pasta": "csb",
+      "parte": "Construtora Marimbondo",
+      "partes_processo": "Reqte CSB Prime Empreendimentos Imobiliários Ltda., Reqda Chrislany Darke Barbosa Cruzeiro",
+      "origem": "Foro de Lençóis Paulista - 2ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "31-08-2023",
+        "descricao": "Remetido ao DJE Relação: 0677/2023_x000D_\nTeor do ato: Advogado do(a) requerido: providencie a impressão do(a) certidão de honorários de fls. 297, assinado(a) digitalmente, que se encontra disponibilizada no sítio do Tribunal de Justiça do Estado de São Paulo sistema ESAJ. Prazo: 10 (dez) dias._x000D_\nAdvogados(s): Rogerio do Amaral (OAB 150251/SP), Cid Carlos de Freitas (OAB 231735/SP), Kleber Giacomini (OAB 235027/SP), Marco Andre Mantovan (OAB 269237/SP), Lucas Machado Arroyo (OAB 320696/SP), Leunice Amaral de Jesus (OAB 361150/SP), Valmir Amaral de Jesus (OAB 416931/SP)"
+      },
+      "andamentos": [
+        {
+          "data": "31-08-2023",
+          "descricao": "Remetido ao DJE Relação: 0677/2023_x000D_\nTeor do ato: Advogado do(a) requerido: providencie a impressão do(a) certidão de honorários de fls. 297, assinado(a) digitalmente, que se encontra disponibilizada no sítio do Tribunal de Justiça do Estado de São Paulo sistema ESAJ. Prazo: 10 (dez) dias._x000D_\nAdvogados(s): Rogerio do Amaral (OAB 150251/SP), Cid Carlos de Freitas (OAB 231735/SP), Kleber Giacomini (OAB 235027/SP), Marco Andre Mantovan (OAB 269237/SP), Lucas Machado Arroyo (OAB 320696/SP), Leunice Amaral de Jesus (OAB 361150/SP), Valmir Amaral de Jesus (OAB 416931/SP)"
+        }
+      ]
+    },
+    {
+      "cnj": "1028974-60.2019.8.26.0100",
+      "status": "novo",
+      "pasta": "P001229",
+      "parte": "N/A",
+      "partes_processo": "Reqte Karina Coe Razuk, Reqdo Leida Regina de Oliveira Me",
+      "origem": "Foro Central Cível - 16ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "20-04-2023",
+        "descricao": "Certidão de Cartório Expedida Certifico e dou fé que decorreu o prazo legal sem demais manifestações da parte interessada."
+      },
+      "andamentos": [
+        {
+          "data": "20-04-2023",
+          "descricao": "Certidão de Cartório Expedida Certifico e dou fé que decorreu o prazo legal sem demais manifestações da parte interessada."
+        }
+      ]
+    },
+    {
+      "cnj": "1045001-16.2022.8.26.0100",
+      "status": "novo",
+      "pasta": "P001266",
+      "parte": "N/A",
+      "partes_processo": "Reqte Karina Coe Razuk, Reqdo Omar Antonio Caraballo da Oca",
+      "origem": "Foro Central Cível - 42ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "20-01-2023",
+        "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+      },
+      "andamentos": [
+        {
+          "data": "20-01-2023",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+        }
+      ]
+    },
+    {
+      "cnj": "1002677-95.2016.8.26.0431",
+      "status": "novo",
+      "pasta": "P001201",
+      "parte": "N/A",
+      "partes_processo": "Reqte Denilson José dos Santos Garcia, Reqdo Construtora Marimbondo Ltda., Perito LUIZ CARLOS ESPANHOL",
+      "origem": "Foro de Pederneiras - 2ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "18-02-2022",
+        "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+      },
+      "andamentos": [
+        {
+          "data": "18-02-2022",
+          "descricao": "Certidão de Cartório Expedida Certidão de Cartório - CUSTAS - Certidão de Pagamento de Custas e Arquivamento - Cível - 61615"
+        }
+      ]
+    },
+    {
+      "cnj": "1015501-18.2015.8.26.0562",
+      "status": "novo",
+      "pasta": "P000106",
+      "parte": "Darlan Carneiro da Silva",
+      "partes_processo": "Reqte Aquilino Ernesto Tito Yanez Pujol, Reqdo Alexandre Muradas Ruffo, Interesdo. Claudia Regina Moreira Vasconcellos Ruffo",
+      "origem": "Foro de Santos - 12ª Vara Cível",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "02-03-2021",
+        "descricao": "Arquivado Definitivamente"
+      },
+      "andamentos": [
+        {
+          "data": "02-03-2021",
+          "descricao": "Arquivado Definitivamente"
+        }
+      ]
+    },
+    {
+      "cnj": "0000386-73.2005.8.26.0319",
+      "status": "novo",
+      "pasta": "CM despejo",
+      "parte": "Borborema Empreendimentos Imobiliários",
+      "partes_processo": "Reqte Construtora Marimbondo Ltda, Reqdo Carlos Rodrigo Oliveira Antonello",
+      "origem": "Foro de Lençóis Paulista - 1ª Vara",
+      "total_andamentos": 1,
+      "ultimo_andamento": {
+        "data": "09-06-2015",
+        "descricao": "Certidão de Publicação Expedida Relação :0035/2013_x000D_\nData da Disponibilização: 03/10/2013_x000D_\nData da Publicação: 04/10/2013_x000D_\nNúmero do Diário: _x000D_\nPágina:"
+      },
+      "andamentos": [
+        {
+          "data": "09-06-2015",
+          "descricao": "Certidão de Publicação Expedida Relação :0035/2013_x000D_\nData da Disponibilização: 03/10/2013_x000D_\nData da Publicação: 04/10/2013_x000D_\nNúmero do Diário: _x000D_\nPágina:"
+        }
+      ]
+    }
+  ]
+}

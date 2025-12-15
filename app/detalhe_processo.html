@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Dashboard - Processo...</title>
+    <style>
+        /* Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        
+        /* Header Principal */
+        .header { background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .btn-voltar { background: #667eea; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-block; font-size: 0.9em; }
+        .btn-voltar:hover { background: #764ba2; }
+        
+        /* CNJ e Status */
+        .cnj-numero { font-size: 1.5em; font-weight: 700; color: #2c3e50; font-family: 'Courier New', monospace; }
+        .status-badge { padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.9em; }
+        
+        /* Seção Geral */
+        .secao { background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .secao h2 { font-size: 1.4em; margin-bottom: 15px; color: #2c3e50; border-bottom: 2px solid #667eea; padding-bottom: 10px; }
+        
+        /* TIMELINE - Replicando o estilo do seu gerador */
+        .timeline { display: flex; justify-content: space-between; align-items: center; margin: 20px 0; position: relative; padding: 0 10px; }
+        .timeline::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: #ddd; z-index: 0; transform: translateY(-50%); }
+        .stage { flex: 1; text-align: center; position: relative; z-index: 1; margin: 0 5px; }
+        .stage-icon { font-size: 2em; margin-bottom: 5px; }
+        .stage-nome { font-size: 0.85em; color: #555; font-weight: 600; }
+        .stage-circle { width: 40px; height: 40px; border-radius: 50%; background: white; border: 3px solid #ddd; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+        .stage.completo .stage-circle { background: #27ae60; border-color: #27ae60; }
+        .stage.completo .stage-icon { color: white; }
+        .stage:not(.completo) .stage-icon { color: #ddd; }
+
+
+        /* Próxima Ação */
+        .proxima-acao { border-left: 5px solid; padding: 15px; border-radius: 8px; margin: 15px 0; font-weight: 600; }
+        
+        /* Andamentos */
+        .andamentos-lista { list-style: none; }
+        .andamento-item { padding: 12px 0; border-bottom: 1px solid #eee; display: flex; gap: 15px; align-items: flex-start; }
+        .andamento-item:last-child { border-bottom: none; }
+        .andamento-data { min-width: 120px; font-weight: 600; color: #667eea; font-family: 'Courier New', monospace; font-size: 0.9em; }
+        .andamento-desc { color: #555; font-size: 0.95em; }
+        
+        /* Info Técnica */
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .info-item { padding: 12px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #667eea; }
+        .info-label { font-size: 0.8em; color: #888; text-transform: uppercase; font-weight: 600; }
+        .info-valor { margin-top: 5px; color: #2c3e50; word-break: break-word; font-size: 0.95em; }
+
+        .loading-text { text-align: center; color: #764ba2; padding: 50px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div id="main-content">
+            <div class="header">
+                <div class="header-top">
+                    <div id="cnj-area">
+                        <div class="cnj-numero" id="cnj-title">Carregando CNJ...</div>
+                        <div style="font-size: 0.9em; color: #888; margin-top: 5px;">Pasta: <span id="pasta">N/A</span></div>
+                    </div>
+                    <span class="status-badge" id="status-badge">Carregando</span>
+                </div>
+                <a href="painel.html" class="btn-voltar">← Voltar para Dashboard</a>
+            </div>
+
+            <div class="secao">
+                <h2>📊 Timeline do Processo</h2>
+                <div class="timeline" id="timeline">
+                    <div class="loading-text">Gerando Linha do Tempo...</div>
+                </div>
+            </div>
+
+            <div class="secao">
+                <h2>⚡ Próxima Ação</h2>
+                <div class="proxima-acao" id="proxima-acao">Buscando sugestão...</div>
+            </div>
+
+            <div class="secao">
+                <h2>📝 Histórico de Andamentos</h2>
+                <ul class="andamentos-lista" id="andamentos-lista">
+                    <li class="loading-text" style="padding: 20px;">Carregando histórico...</li>
+                </ul>
+            </div>
+
+            <div class="secao">
+                <h2>📋 Informações Técnicas</h2>
+                <div class="info-grid">
+                    <div class="info-item"><div class="info-label">Tipo Processo</div><div class="info-valor" id="tipo_processo">...</div></div>
+                    <div class="info-item"><div class="info-label">Tribunal</div><div class="info-valor" id="tribunal">...</div></div>
+                    <div class="info-item"><div class="info-label">Partes</div><div class="info-valor" id="parte_principal">...</div></div>
+                    <div class="info-item"><div class="info-label">Parte Adversa</div><div class="info-valor" id="parte_adversa">...</div></div>
+                    <div class="info-item"><div class="info-label">Data Distribuição</div><div class="info-valor" id="data_distribuicao">...</div></div>
+                    <div class="info-item"><div class="info-label">Último Andamento</div><div class="info-valor" id="ultimo_andamento_data">...</div></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="error-message" class="loading-text" style="display: none; color: #e53e3e;"></div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:8000/api/v1/processo/';
+
+        // Função para obter o CNJ da URL (o número após ?cnj=)
+        function getCnjFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('cnj'); 
+        }
+
+        async function carregarDetalhe() {
+            const cnj = getCnjFromUrl();
+            const errorElement = document.getElementById('error-message');
+            const mainContent = document.getElementById('main-content');
+            
+            if (!cnj) {
+                errorElement.textContent = "ERRO: Número CNJ não fornecido na URL.";
+                errorElement.style.display = 'block';
+                mainContent.style.display = 'none';
+                return;
+            }
+
+            document.getElementById('cnj-title').textContent = cnj;
+            document.getElementById('page-title').textContent = `Dashboard: ${cnj}`;
+
+            try {
+                const res = await fetch(API_URL + cnj);
+                const data = await res.json();
+                
+                if (res.status === 404) {
+                    errorElement.textContent = `Processo ${cnj} não encontrado no banco de dados.`;
+                    errorElement.style.display = 'block';
+                    mainContent.style.display = 'none';
+                    return;
+                }
+
+                // Carregar lógica de estilo do módulo Python (logica_processo.py)
+                // Usaremos a lógica básica para display imediato.
+                const status = data.status || 'novo';
+                const statusUpperCase = status.toUpperCase();
+                
+                const statusBadge = document.getElementById('status-badge');
+                statusBadge.textContent = statusUpperCase;
+                statusBadge.style.backgroundColor = (status === 'urgente' ? '#e53e3e' : status === 'andamento' ? '#d69e2e' : '#3182ce');
+                statusBadge.style.color = 'white';
+
+                // --- Preenche Informações Principais ---
+                document.getElementById('pasta').textContent = data.pasta_sistema || 'N/A';
+                document.getElementById('parte_principal').textContent = data.parte_principal || 'N/A';
+                document.getElementById('parte_adversa').textContent = data.parte_adversa || 'N/A';
+                document.getElementById('tipo_processo').textContent = data.tipo_processo || 'N/A';
+                document.getElementById('tribunal').textContent = data.tribunal || 'N/A';
+                document.getElementById('data_distribuicao').textContent = data.data_distribuicao || 'N/A';
+                document.getElementById('ultimo_andamento_data').textContent = data.ultimo_andamento_data || 'N/A';
+
+                // --- Preenche Ação Próxima (Lógica simplificada) ---
+                const proximaAcao = document.getElementById('proxima-acao');
+                const prazoData = data.proximo_prazo_data;
+                
+                if (status === 'urgente' || status === 'espera') {
+                    proximaAcao.textContent = `Atenção: Prazo próximo em ${prazoData || 'dias'}. Ação necessária.`;
+                    proximaAcao.style.borderColor = '#e53e3e';
+                    proximaAcao.style.backgroundColor = '#fbe0e0';
+                    proximaAcao.style.color = '#c53030';
+                } else {
+                    proximaAcao.textContent = 'Aguardando próximo andamento ou manifestação automática.';
+                    proximaAcao.style.borderColor = '#3182ce';
+                    proximaAcao.style.backgroundColor = '#ebf8ff';
+                    proximaAcao.style.color = '#2c5282';
+                }
+
+
+                // --- Preenche Timeline (Hardcoded baseada no seu gerador) ---
+                const timelineStages = [
+                    { nome: 'Ajuizamento', icon: '📝', check_status: 'ajuizamento' },
+                    { nome: 'Citação', icon: '📮', check_status: 'citacao' },
+                    { nome: 'Resposta', icon: '💬', check_status: 'andamento' },
+                    { nome: 'Prova', icon: '🔍', check_status: 'espera' },
+                    { nome: 'Sentença', icon: '⚖️', check_status: 'encerrado' },
+                ];
+                
+                const timelineHTML = timelineStages.map(stage => {
+                    // Esta lógica precisa ser aprimorada, mas serve para o teste visual
+                    const isCompleted = (status !== 'novo' && status !== 'ajuizamento'); 
+                    const completoClass = isCompleted ? 'completo' : '';
+                    return `
+                        <div class="stage ${completoClass}">
+                            <div class="stage-circle"></div>
+                            <div class="stage-icon">${stage.icon}</div>
+                            <div class="stage-nome">${stage.nome}</div>
+                        </div>
+                    `;
+                }).join('');
+                document.getElementById('timeline').innerHTML = timelineHTML;
+
+
+                // --- Preenche Andamentos ---
+                const andamentosList = document.getElementById('andamentos-lista');
+                if (data.andamentos && data.andamentos.length > 0) {
+                    andamentosList.innerHTML = data.andamentos.map(a => `
+                        <li class="andamento-item">
+                            <div class="andamento-data">${a.data_andamento}</div>
+                            <div class="andamento-desc">${a.descricao}</div>
+                        </li>
+                    `).join('');
+                } else {
+                    andamentosList.innerHTML = '<li class="loading-text" style="padding: 20px;">Sem andamentos registrados.</li>';
+                }
+
+            } catch (error) {
+                console.error("Erro ao carregar detalhes:", error);
+                errorElement.textContent = `Erro grave ao processar dados. Console log para detalhes.`;
+                errorElement.style.display = 'block';
+                mainContent.style.display = 'none';
+            }
+        }
+
+        carregarDetalhe();
+    </script>
+</body>
+</html>

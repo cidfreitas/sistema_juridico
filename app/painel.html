@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><title>Dashboard Completo</title>
+<style>
+/* Layout Roxo Executivo */
+body{font-family:-apple-system,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;padding:20px;color:#333}
+.container{max-width:1400px;margin:0 auto}
+.header{text-align:center;color:white;margin-bottom:30px;text-shadow:0 2px 4px rgba(0,0,0,0.2)}
+.header h1{font-size:2.2em;font-weight:700}
+
+/* Grid de 4 Colunas */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:30px}
+.card{background:rgba(255,255,255,0.95);border-radius:12px;padding:20px;box-shadow:0 8px 16px rgba(0,0,0,0.1);text-align:center}
+.card h3{color:#666;font-size:0.85em;text-transform:uppercase;border-bottom:2px solid #eee;padding-bottom:10px;margin-bottom:10px;font-weight:700}
+.metric{font-size:2.8em;font-weight:800;color:#4a5568}
+
+/* Cores dos Cards */
+.card.danger .metric{color:#e53e3e} /* Vermelho */
+.card.warning .metric{color:#d69e2e} /* Amarelo/Laranja */
+.card.info .metric{color:#3182ce}   /* Azul */
+
+/* Tabela com Rolagem */
+.table-container{background:rgba(255,255,255,0.95);border-radius:12px;padding:0;box-shadow:0 8px 16px rgba(0,0,0,0.1);overflow:hidden;display:flex;flex-direction:column;max-height:65vh}
+.table-header-title{padding:20px;font-size:1.2em;font-weight:bold;color:#2d3748;background:white;border-bottom:2px solid #eee}
+.scroll-area{overflow-y:auto;flex:1}
+
+table{width:100%;border-collapse:collapse}
+th{text-align:left;padding:15px;background:#f7fafc;color:#4a5568;font-weight:700;font-size:0.8em;text-transform:uppercase;position:sticky;top:0;z-index:10;box-shadow:0 2px 2px -1px rgba(0,0,0,0.1)}
+td{padding:12px 15px;border-bottom:1px solid #edf2f7;font-size:0.9em;vertical-align:top}
+tr:hover{background-color:#f7fafc}
+
+.date-badge{background:#ebf8ff;color:#3182ce;padding:4px 8px;border-radius:6px;font-weight:bold;white-space:nowrap;font-size:0.85em}
+.cnj{font-family:monospace;font-weight:600}
+.partes{font-weight:600;display:block;max-width:280px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header"><h1>⚖️ Escritório Digital</h1><p>Visão Geral Executiva</p></div>
+
+<div class="grid">
+    <div class="card"><h3>Total Processos</h3><div class="metric" id="total">-</div></div>
+    <div class="card danger"><h3>Prazos Vencidos</h3><div class="metric" id="venc">-</div></div>
+    <div class="card warning"><h3>Prazos 7 Dias</h3><div class="metric" id="prox">-</div></div>
+    <div class="card info"><h3>Novos Hoje</h3><div class="metric" id="novos">-</div></div>
+</div>
+
+<div class="table-container">
+<div class="table-header-title">📬 Últimos Movimentos (Role para ver mais)</div>
+<div class="scroll-area">
+<table>
+<thead><tr><th width="100">Data</th><th width="200">CNJ</th><th width="250">Cliente / Parte</th><th>Descrição</th></tr></thead>
+<tbody id="lista"><tr><td colspan="4" align="center" style="padding:40px">Carregando dados...</td></tr></tbody>
+</table>
+</div>
+</div>
+</div>
+
+<script>
+const API='http://localhost:8000/api/v1/dashboard';
+async function up(){
+try{
+const r=await fetch(API);const d=await r.json();
+if(d.metricas){
+document.getElementById('total').innerText=d.metricas.total_processos;
+document.getElementById('venc').innerText=d.metricas.prazos_criticos;
+document.getElementById('prox').innerText=d.metricas.prazos_proximos;
+document.getElementById('novos').innerText=d.metricas.novos_movimentos;
+}
+if(d.movimentos_recentes&&d.movimentos_recentes.length>0){
+document.getElementById('lista').innerHTML=d.movimentos_recentes.map(m=>`<tr><td><span class="date-badge">${m.data}</span></td><td class="cnj">${m.cnj}</td><td><span class="partes" title="${m.partes}">${m.partes}</span></td><td>${m.descricao}</td></tr>`).join('');
+}
+}catch(e){console.error(e);}
+}
+up();setInterval(up,10000);
+</script></body></html>

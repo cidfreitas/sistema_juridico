@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Jurídico v2.0</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f6f8; margin: 0; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; }
+        .card h3 { margin: 0; color: #666; font-size: 0.9em; text-transform: uppercase; }
+        .card .number { font-size: 2.5em; font-weight: bold; color: #2c3e50; margin: 10px 0; }
+        .card.danger .number { color: #e74c3c; }
+        .card.warning .number { color: #f39c12; }
+        
+        .table-container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .table-header { font-size: 1.2em; font-weight: bold; margin-bottom: 15px; color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; }
+        th { text-align: left; padding: 12px; background: #f8f9fa; color: #666; font-size: 0.9em; }
+        td { padding: 12px; border-bottom: 1px solid #eee; font-size: 0.95em; }
+        tr:hover { background-color: #f8f9fa; }
+        .date-badge { background: #e3f2fd; color: #1976d2; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Total Processos</h3>
+            <div class="number" id="total-proc">-</div>
+        </div>
+        <div class="card danger">
+            <h3>Prazos Vencidos</h3>
+            <div class="number" id="criticos">-</div>
+            <small>Ação Necessária</small>
+        </div>
+        <div class="card warning">
+            <h3>Prazos 7 Dias</h3>
+            <div class="number" id="proximos">-</div>
+            <small>Atenção</small>
+        </div>
+        <div class="card">
+            <h3>Novos Movimentos</h3>
+            <div class="number" id="novos-mov">-</div>
+            <small>Última Captura</small>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <div class="table-header">📬 Movimentos Recentes (TJSP) - Fonte Real</div>
+        <table id="tabela-movimentos">
+            <thead>
+                <tr>
+                    <th width="120">Data</th>
+                    <th width="220">CNJ</th>
+                    <th>Descrição do Andamento</th>
+                </tr>
+            </thead>
+            <tbody id="lista-movimentos">
+                <tr><td colspan="3" style="text-align:center">Carregando dados reais...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:8000/api/v1/dashboard';
+        const API_KEY = 'sistema_juridico_cid_2025';
+
+        async function carregarDashboard() {
+            try {
+                const response = await fetch(API_URL, { headers: { 'X-API-Key': API_KEY } });
+                const data = await response.json();
+
+                // 1. Atualizar Números
+                document.getElementById('total-proc').innerText = data.metricas.total_processos;
+                document.getElementById('criticos').innerText = data.metricas.prazos_criticos;
+                document.getElementById('proximos').innerText = data.metricas.prazos_proximos;
+                document.getElementById('novos-mov').innerText = data.metricas.novos_movimentos;
+
+                // 2. Atualizar Tabela
+                const tbody = document.getElementById('lista-movimentos');
+                tbody.innerHTML = '';
+
+                data.movimentos_recentes.forEach(mov => {
+                    const row = `
+                        <tr>
+                            <td><span class="date-badge">${mov.data}</span></td>
+                            <td style="font-family:monospace; font-weight:bold">${mov.cnj}</td>
+                            <td style="color:#444">${mov.descricao}</td>
+                        </tr>
+                    `;
+                    tbody.innerHTML += row;
+                });
+
+            } catch (error) {
+                console.error(error);
+                document.getElementById('lista-movimentos').innerHTML = 
+                    `<tr><td colspan="3" style="color:red; text-align:center">Erro ao conectar na API. Verifique se o Python está rodando.</td></tr>`;
+            }
+        }
+
+        // Atualizar a cada 30s
+        carregarDashboard();
+        setInterval(carregarDashboard, 30000);
+    </script>
+
+</body>
+</html>

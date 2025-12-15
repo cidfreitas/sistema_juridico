@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 Dashboard - Sistema Jurídico Agêntico</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .header { text-align: center; color: white; margin-bottom: 30px; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .card.clickable { cursor: pointer; }
+        .card.clickable:hover { transform: translateY(-5px); box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); }
+        .card h3 {
+            color: #333;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .metric { font-size: 2.5em; font-weight: bold; color: #667eea; margin-bottom: 5px; }
+        .metric-label { color: #666; font-size: 0.9em; }
+        .metric.critical { color: #e74c3c; }
+        .metric.warning { color: #f39c12; }
+        .metric.info { color: #3498db; }
+        .chart-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .chart-container h2 { color: #333; margin-bottom: 15px; }
+        .prazos-table {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .prazos-table h2 {
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn-voltar {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+        .btn-voltar:hover { background: #5568d3; }
+        table { width: 100%; border-collapse: collapse; }
+        th {
+            background: #f0f0f0;
+            color: #333;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #ddd;
+        }
+        td { padding: 12px; border-bottom: 1px solid #eee; }
+        tr:hover { background: #f9f9f9; }
+        .status-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        .status-vencido, .status-aberto { background: #e74c3c; color: white; }
+        .footer { text-align: center; color: rgba(255, 255, 255, 0.8); font-size: 0.9em; margin-top: 40px; }
+        .error { background: #e74c3c; color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .pulse { animation: pulse 2s ease-in-out infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Dashboard Executivo</h1>
+            <p>Análise em Tempo Real - Sistema Jurídico Agêntico</p>
+        </div>
+        <div id="error-container"></div>
+        <div class="grid">
+            <div class="card">
+                <h3>⚖️ Total de Processos</h3>
+                <div class="metric" id="total-processos">106</div>
+                <div class="metric-label">Processos ativos</div>
+            </div>
+            <div class="card">
+                <h3>🔴 CRÍTICO: Prazos Vencidos</h3>
+                <div class="metric critical" id="prazos-vencidos">0</div>
+                <div class="metric-label">Ação imediata necessária</div>
+            </div>
+            <div class="card">
+                <h3>⚠️ Prazos Próximos (7 dias)</h3>
+                <div class="metric warning" id="prazos-proximos">0</div>
+                <div class="metric-label">Nos próximos 7 dias</div>
+            </div>
+            <div class="card clickable" onclick="mostrarMovimentos()">
+                <h3>📬 Novos Movimentos</h3>
+                <div class="metric info pulse" id="novos-movimentos">0</div>
+                <div class="metric-label">Clique para ver detalhes</div>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2>📊 Distribuição de Processos por Status</h2>
+            <canvas id="status-chart" style="max-height: 300px;"></canvas>
+        </div>
+        <div class="prazos-table">
+            <h2 id="table-title">
+                <span>⏰ Prazos Críticos (Próximos 3 Dias)</span>
+                <button class="btn-voltar" id="btn-voltar" style="display: none;" onclick="mostrarPrazos()">Voltar</button>
+            </h2>
+            <table>
+                <thead id="table-head">
+                    <tr><th>CNJ</th><th>Parte</th><th>Vencimento</th><th>Status</th></tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr><td colspan="4">Carregando...</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="footer">
+            <p>API: http://localhost:8000 | Atualizado: <span id="last-update">-</span></p>
+        </div>
+    </div>
+    <script>
+        const API_URL = 'http://localhost:8000/api/v1';
+        const API_KEY = 'sistema_juridico_cid_2025';
+        const headers = { 'X-API-Key': API_KEY, 'Content-Type': 'application/json' };
+        let statusChart = null;
+        let modoAtual = 'prazos';
+
+        async function carregarDashboard() {
+            try {
+                const response = await fetch(`${API_URL}/dashboard`, { headers });
+                if (!response.ok) throw new Error('Erro ao carregar dashboard');
+                const data = await response.json();
+                renderizarMetricas(data);
+                if (modoAtual === 'prazos') carregarPrazosCriticos();
+                atualizarTimestamp();
+            } catch (error) {
+                mostrarErro('Erro ao conectar com API: ' + error.message);
+            }
+        }
+
+        function renderizarMetricas(data) {
+            const statuses = data.status_processos;
+            const total = Object.values(statuses).reduce((a, b) => a + b, 0);
+            document.getElementById('total-processos').textContent = total;
+            document.getElementById('prazos-vencidos').textContent = data.prazos_vencidos;
+            document.getElementById('prazos-proximos').textContent = data.prazos_proximos;
+            document.getElementById('novos-movimentos').textContent = data.novos_movimentos || 0;
+            renderizarGrafico(statuses);
+        }
+
+        function renderizarGrafico(statuses) {
+            const ctx = document.getElementById('status-chart').getContext('2d');
+            if (statusChart) statusChart.destroy();
+            statusChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['🔴 Urgente', '🟡 Andamento', '🔵 Espera', '🟢 Novo'],
+                    datasets: [{
+                        data: [statuses.urgente || 0, statuses.andamento || 0, statuses.espera || 0, statuses.novo || 0],
+                        backgroundColor: ['#e74c3c', '#f39c12', '#3498db', '#27ae60'],
+                        borderColor: 'rgba(255, 255, 255, 0.95)',
+                        borderWidth: 2
+                    }]
+                },
+                options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+            });
+        }
+
+        async function carregarPrazosCriticos() {
+            try {
+                const response = await fetch(`${API_URL}/prazos/criticos?dias=3`, { headers });
+                if (!response.ok) throw new Error('Erro ao carregar prazos');
+                const data = await response.json();
+                renderizarPrazos(data.prazos);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        function renderizarPrazos(prazos) {
+            const tbody = document.getElementById('table-body');
+            if (prazos.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: #27ae60;">✅ Nenhum prazo crítico</td></tr>';
+                return;
+            }
+            tbody.innerHTML = prazos.slice(0, 10).map(prazo => `
+                <tr>
+                    <td><code>${prazo.cnj}</code></td>
+                    <td>${(prazo.parte_principal || 'N/A').substring(0, 40)}</td>
+                    <td>${prazo.data_vencimento}</td>
+                    <td><span class="status-badge status-${prazo.status}">${prazo.status.toUpperCase()}</span></td>
+                </tr>
+            `).join('');
+        }
+
+        async function mostrarMovimentos() {
+            modoAtual = 'movimentos';
+            document.getElementById('table-title').innerHTML = '<span>📬 Movimentos Recentes (Últimos 3 Dias)</span>';
+            document.getElementById('btn-voltar').style.display = 'inline-block';
+            document.getElementById('table-head').innerHTML = '<tr><th>CNJ</th><th>Parte</th><th>Data</th><th>Tipo</th></tr>';
+            
+            try {
+                const response = await fetch(`${API_URL}/movimentos/recentes?dias=3`, { headers });
+                if (!response.ok) throw new Error('Erro ao carregar movimentos');
+                const data = await response.json();
+                renderizarMovimentos(data.movimentos);
+            } catch (error) {
+                mostrarErro('Erro ao carregar movimentos: ' + error.message);
+            }
+        }
+
+        function renderizarMovimentos(movimentos) {
+            const tbody = document.getElementById('table-body');
+            if (movimentos.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align: center;">Nenhum movimento recente</td></tr>';
+                return;
+            }
+            tbody.innerHTML = movimentos.map(mov => `
+                <tr>
+                    <td><code>${mov.cnj}</code></td>
+                    <td>${(mov.parte_principal || 'N/A').substring(0, 40)}</td>
+                    <td>${mov.data_andamento || 'N/A'}</td>
+                    <td>${(mov.tipo_andamento || 'N/A').substring(0, 30)}</td>
+                </tr>
+            `).join('');
+        }
+
+        function mostrarPrazos() {
+            modoAtual = 'prazos';
+            document.getElementById('table-title').innerHTML = '<span>⏰ Prazos Críticos (Próximos 3 Dias)</span>';
+            document.getElementById('btn-voltar').style.display = 'none';
+            document.getElementById('table-head').innerHTML = '<tr><th>CNJ</th><th>Parte</th><th>Vencimento</th><th>Status</th></tr>';
+            carregarPrazosCriticos();
+        }
+
+        function mostrarErro(msg) {
+            const container = document.getElementById('error-container');
+            container.innerHTML = `<div class="error">${msg}</div>`;
+            setTimeout(() => container.innerHTML = '', 5000);
+        }
+
+        function atualizarTimestamp() {
+            document.getElementById('last-update').textContent = new Date().toLocaleTimeString('pt-BR');
+        }
+
+        carregarDashboard();
+        setInterval(carregarDashboard, 30000);
+    </script>
+</body>
+</html>

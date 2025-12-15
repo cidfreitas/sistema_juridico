@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban - Seu Sistema Jurídico</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1600px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header p { font-size: 1.1em; opacity: 0.9; }
+        .kanban-board {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .kanban-column {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .column-header {
+            padding: 15px;
+            font-weight: 600;
+            font-size: 1.1em;
+            border-bottom: 3px solid;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .column-header.urgente { background: #fff5f5; border-bottom-color: #e74c3c; color: #c0392b; }
+        .column-header.andamento { background: #fff9f0; border-bottom-color: #f39c12; color: #d68910; }
+        .column-header.espera { background: #f5f5f5; border-bottom-color: #95a5a6; color: #7f8c8d; }
+        .column-header.novo { background: #f0f9ff; border-bottom-color: #3498db; color: #2980b9; }
+        .badge {
+            background: rgba(0,0,0,0.1);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 700;
+        }
+        .cards-container {
+            padding: 15px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow-y: auto;
+        }
+        .process-card {
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-left: 4px solid #3498db;
+        }
+        .process-card:hover { 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            transform: translateY(-2px);
+        }
+        .process-card.urgente { border-left-color: #e74c3c; background: #fadbd8; }
+        .process-card.andamento { border-left-color: #f39c12; background: #fdebd0; }
+        .process-card.espera { border-left-color: #95a5a6; background: #f4f6f7; }
+        .process-card.novo { border-left-color: #3498db; background: #ebf5fb; }
+        .card-cnj {
+            font-weight: 600;
+            font-size: 0.9em;
+            color: #2c3e50;
+            margin-bottom: 6px;
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+        }
+        .card-parte {
+            font-size: 0.8em;
+            color: #555;
+            margin-bottom: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .card-meta {
+            font-size: 0.75em;
+            color: #888;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        .stat-label { font-size: 0.95em; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚖️ Kanban Jurídico</h1>
+            <p>101 Processos | 171 Andamentos</p>
+        </div>
+
+        <div class="kanban-board">
+
+            <div class="kanban-column">
+                <div class="column-header urgente">
+                    <span>🔴 URGENTE</span>
+                    <span class="badge">0</span>
+                </div>
+                <div class="cards-container">
+
+                </div>
+            </div>
+
+            <div class="kanban-column">
+                <div class="column-header andamento">
+                    <span>🟡 EM ANDAMENTO</span>
+                    <span class="badge">14</span>
+                </div>
+                <div class="cards-container">
+
+                    <div class="process-card andamento" title="N/A">
+                        <div class="card-cnj">1000419-34.2024.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 5</span>
+                            <span>P001298</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card andamento" title="Fernando Coe Razuk">
+                        <div class="card-cnj">1198425-10.2024.8.26.0100</div>
+                        <div class="card-parte">Fernando Coe Razuk...</div>
+                        <div class="card-meta">
+                            <span>📊 5</span>
+                            <span>P001310</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card andamento" title="N/A">
+                        <div class="card-cnj">0001176-50.2021.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 3</span>
+                            <span>P001201</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card andamento" title="N/A">
+                        <div class="card-cnj">1001676-65.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001283</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card andamento" title="N/A">
+                        <div class="card-cnj">2248817-09.2025.8.26.0000</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 3</span>
+                            <span>P001299</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card andamento" title="N/A">
+                        <div class="card-cnj">1002984-80.2021.8.26.0655</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P000203X</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card andamento" title="N/A">
+                        <div class="card-cnj">1011437-02.2024.8.26.0286</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001305</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card andamento" title="N/A">
+                        <div class="card-cnj">1002875-58.2025.8.26.0483</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001308</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card andamento" title="CSB Prime Empreendimentos">
+                        <div class="card-cnj">0017930-96.2020.8.26.0562</div>
+                        <div class="card-parte">CSB Prime Empreendimentos...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P000106</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card andamento" title="N/A">
+                        <div class="card-cnj">1172104-69.2023.8.26.0100</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001295</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card andamento" title="N/A">
+                        <div class="card-cnj">0001065-68.2024.8.26.0073</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001286</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card andamento" title="N/A">
+                        <div class="card-cnj">1064673-13.2022.8.26.0002</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001242</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card andamento" title="N/A">
+                        <div class="card-cnj">2223759-04.2025.8.26.0000</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001287</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card andamento" title="N/A">
+                        <div class="card-cnj">0005341-07.2008.8.26.0655</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P000203</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="kanban-column">
+                <div class="column-header espera">
+                    <span>⏸️ EM ESPERA</span>
+                    <span class="badge">9</span>
+                </div>
+                <div class="cards-container">
+
+                    <div class="process-card espera" title="Cid Carlos de Freitas">
+                        <div class="card-cnj">0004736-36.2007.8.26.0319</div>
+                        <div class="card-parte">Cid Carlos de Freitas...</div>
+                        <div class="card-meta">
+                            <span>📊 3</span>
+                            <span>Boso</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card espera" title="N/A">
+                        <div class="card-cnj">1001160-45.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001276</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card espera" title="N/A">
+                        <div class="card-cnj">1002924-49.2017.8.26.0655</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P000203Mp</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card espera" title="N/A">
+                        <div class="card-cnj">1001343-16.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001281</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card espera" title="Gerson Edmundo Menghin">
+                        <div class="card-cnj">1010657-52.2015.8.26.0068</div>
+                        <div class="card-parte">Gerson Edmundo Menghin...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P000106</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card espera" title="N/A">
+                        <div class="card-cnj">0001151-78.2020.8.26.0655</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P000203</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card espera" title="N/A">
+                        <div class="card-cnj">1002131-15.2015.8.26.0095</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001197</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card espera" title="Marcos Momo">
+                        <div class="card-cnj">0007229-31.2005.8.26.0068</div>
+                        <div class="card-parte">Marcos Momo...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P000106</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card espera" title="N/A">
+                        <div class="card-cnj">1001813-47.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001284</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="kanban-column">
+                <div class="column-header novo">
+                    <span>🟦 NOVOS</span>
+                    <span class="badge">78</span>
+                </div>
+                <div class="cards-container">
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000565-19.2023.8.26.0073</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 7</span>
+                            <span>P001286</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000630-41.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 8</span>
+                            <span>P001262</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000004-51.2024.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 7</span>
+                            <span>P001296</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000970-82.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 4</span>
+                            <span>P001269</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1001847-56.2021.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001249</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000468-46.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001256</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000766-38.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001280</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000394-89.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001254</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000393-07.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001253</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000395-74.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001255</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1005020-33.2024.8.26.0286</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001301</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000832-18.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001268</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000262-61.2024.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001297</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0001002-02.2025.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001277</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1001244-46.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001277</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000564-34.2023.8.26.0073</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001287</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000823-56.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 3</span>
+                            <span>P001264</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0000216-37.2024.8.26.0319</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001239</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1010877-57.2025.8.26.0405</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001311</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1002234-66.2024.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001304</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1004869-67.2024.8.26.0286</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001302</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000537-78.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001261</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0000217-74.2024.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001245</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0004673-56.2024.8.26.0079</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001224</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000479-75.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001259</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1005532-16.2024.8.26.0286</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001300</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1001538-37.2024.8.26.0073</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001299</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0003199-50.2025.8.26.0003</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P002128</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="Elianka Empreendimentos Imobiliarios">
+                        <div class="card-cnj">1503425-44.2021.8.26.0286</div>
+                        <div class="card-parte">Elianka Empreendimentos Imobiliarios...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>ExecFiscal</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="Val Paraiso Empreendimentos">
+                        <div class="card-cnj">1500764-72.2018.8.26.0068</div>
+                        <div class="card-parte">Val Paraiso Empreendimentos...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>DivAtiva</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000470-98.2022.8.26.0145</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001288</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1001050-46.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001271</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000643-40.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001263</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1033309-83.2023.8.26.0003</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P002128</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0043808-80.2022.8.26.0100</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001266</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1001835-79.2021.8.26.0063</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 3</span>
+                            <span>P001251</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0007490-30.2024.8.26.0003</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P002128</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1001359-67.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001279</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0001089-89.2024.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001234</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0004291-63.2024.8.26.0079</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001224</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">2366575-43.2024.8.26.0000</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001245</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000883-63.2021.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001246</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000478-90.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001258</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1001816-31.2024.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001303</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0000271-06.2025.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001260</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0000067-59.2025.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001257</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="Karina Coe Razuk">
+                        <div class="card-cnj">1505268-20.2020.8.26.0079</div>
+                        <div class="card-parte">Karina Coe Razuk...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>Elianka</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0058568-63.2024.8.26.0100</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001266</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">2234434-60.2024.8.26.0000</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 6</span>
+                            <span>P002128ED</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000494-44.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001260</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000477-08.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001257</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0061987-67.2019.8.26.0100</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001229</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1002524-27.2021.8.26.0483</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001247</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">2197849-09.2024.8.26.0000</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001299</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1001618-33.2020.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001240</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1001044-44.2019.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001234</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1001078-14.2022.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001272</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">2070747-04.2024.8.26.0000</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001201</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1000184-72.2021.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001245</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0001256-09.2024.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001244</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="Kleber Giacomini">
+                        <div class="card-cnj">1003851-50.2024.8.26.0079</div>
+                        <div class="card-parte">Kleber Giacomini...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>Elianka</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1002269-65.2020.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 2</span>
+                            <span>P001244</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">0001258-76.2024.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001248</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="Boncompagni Empreendimentos">
+                        <div class="card-cnj">0001483-78.2023.8.26.0319</div>
+                        <div class="card-parte">Boncompagni Empreendimentos...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>jacaranda</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1001324-15.2019.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001233</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1006788-43.2018.8.26.0079</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001224</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">2096219-41.2023.8.26.0000</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001266</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1002345-37.2020.8.26.0319</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001238</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1004151-05.2023.8.26.0319</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001293</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1002220-24.2020.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001248</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1003238-39.2019.8.26.0068</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P000106</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1002301-18.2020.8.26.0319</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001239</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="Construtora Marimbondo">
+                        <div class="card-cnj">1000095-60.2022.8.26.0319</div>
+                        <div class="card-parte">Construtora Marimbondo...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>csb</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1028974-60.2019.8.26.0100</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001229</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1045001-16.2022.8.26.0100</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001266</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="N/A">
+                        <div class="card-cnj">1002677-95.2016.8.26.0431</div>
+                        <div class="card-parte">N/A...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P001201</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="Darlan Carneiro da Silva">
+                        <div class="card-cnj">1015501-18.2015.8.26.0562</div>
+                        <div class="card-parte">Darlan Carneiro da Silva...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>P000106</span>
+                        </div>
+                    </div>
+
+                    <div class="process-card novo" title="Borborema Empreendimentos Imobiliários">
+                        <div class="card-cnj">0000386-73.2005.8.26.0319</div>
+                        <div class="card-parte">Borborema Empreendimentos Imobiliários...</div>
+                        <div class="card-meta">
+                            <span>📊 1</span>
+                            <span>CM despejo</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <div class="stat-number">0</div>
+                <div class="stat-label">🔴 Urgentes</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">14</div>
+                <div class="stat-label">🟡 Em Andamento</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">9</div>
+                <div class="stat-label">⏸️ Em Espera</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">78</div>
+                <div class="stat-label">🟦 Novos</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

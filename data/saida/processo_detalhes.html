@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Jurídico Agêntico - Detalhes do Processo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f1e8;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* HEADER AZUL ESCURO */
+        .header-top {
+            background-color: #1a3a52;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-left {
+            font-size: 1.3em;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .header-right {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-header {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-header:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .search-box {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .search-box input {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            width: 200px;
+            font-size: 0.9em;
+        }
+
+        /* CONTAINER PRINCIPAL */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 40px;
+        }
+
+        /* HEADER CARD LIMPO */
+        .header-card {
+            background: white;
+            padding: 25px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .header-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex: 1;
+            flex-wrap: wrap;
+        }
+
+        .pasta-display {
+            font-family: 'Courier New', monospace;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #1a3a52;
+            padding-right: 20px;
+            border-right: 2px solid #d0c9bd;
+        }
+
+        .cnj-display {
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+            color: #666;
+        }
+
+        .status-display {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #e8f4f8;
+            color: #1a3a52;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+
+        .prazo-badge {
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85em;
+            color: white;
+            background: #e74c3c;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-pasta {
+            background: #1a3a52;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .btn-pasta:hover {
+            background: #0f2236;
+        }
+
+        /* TABS */
+        .tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 2px solid #d0c9bd;
+            background: white;
+            border-radius: 4px 4px 0 0;
+            overflow-x: auto;
+        }
+
+        .tab {
+            padding: 15px 20px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 0.95em;
+            color: #666;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .tab.active {
+            color: #1a3a52;
+            border-bottom-color: #1a3a52;
+            background: #f5f1e8;
+        }
+
+        .tab:hover {
+            background: #f5f1e8;
+        }
+
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 0 4px 4px 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            min-height: 400px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-content h2 {
+            color: #1a3a52;
+            margin-bottom: 25px;
+            font-size: 1.2em;
+        }
+
+        /* FIRAC LAYOUT */
+        .firac-container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 30px;
+            min-height: 600px;
+        }
+
+        .firac-sidebar {
+            background: #1a3a52;
+            border-radius: 4px;
+            padding: 0;
+            overflow: hidden;
+            height: fit-content;
+        }
+
+        .firac-sidebar-title {
+            background: #1a3a52;
+            color: #d4af37;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 0.85em;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #d0c9bd;
+        }
+
+        .firac-menu {
+            list-style: none;
+        }
+
+        .firac-menu-item {
+            padding: 12px 15px;
+            color: white;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .firac-menu-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .firac-menu-item.active {
+            background: #d4a574;
+            color: #1a3a52;
+            font-weight: bold;
+        }
+
+        .firac-menu-number {
+            font-weight: bold;
+            min-width: 20px;
+        }
+
+        .firac-content {
+            padding: 20px;
+        }
+
+        .firac-section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1a3a52;
+        }
+
+        .firac-icon {
+            font-size: 1.5em;
+        }
+
+        /* COMPLEXIDADE BOX */
+        .complexidade-box {
+            border: 3px solid #f39c12;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            background: #fffef5;
+        }
+
+        .complexidade-label {
+            color: #999;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+
+        .complexidade-valor {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #f39c12;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* INFO CARDS */
+        .info-card {
+            background: #f5f1e8;
+            padding: 20px;
+            border-radius: 4px;
+            border-left: 4px solid #1a3a52;
+            margin-bottom: 20px;
+        }
+
+        .info-card h3 {
+            color: #1a3a52;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .info-item {
+            margin-bottom: 12px;
+        }
+
+        .info-label {
+            color: #666;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .info-value {
+            color: #333;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        /* GRID DE DADOS */
+        .grid-4col {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .data-card {
+            background: #f5f1e8;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 4px solid #d0c9bd;
+        }
+
+        .data-card-label {
+            color: #999;
+            font-size: 0.75em;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .data-card-value {
+            color: #1a3a52;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+
+        /* PONTOS NEVRALG */
+        .pontos-box {
+            background: white;
+            border: 2px solid #d0c9bd;
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .pontos-box h4 {
+            color: #d4a574;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pontos-box ul {
+            list-style-position: inside;
+            color: #333;
+            font-size: 0.9em;
+            line-height: 1.8;
+        }
+
+        /* GRID DE ANÁLISE */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .andamento-item {
+            border-left: 4px solid #1a3a52;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f5f1e8;
+            border-radius: 4px;
+        }
+
+        .andamento-data {
+            color: #666;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .andamento-tipo {
+            color: #1a3a52;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .andamento-desc {
+            color: #333;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        .nota-input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #d0c9bd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.95em;
+            min-height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .btn-adicionar-nota {
+            background: #1a3a52;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-adicionar-nota:hover {
+            background: #0f2236;
+        }
+
+        .nota-item {
+            background: #f5f1e8;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border-left: 4px solid #1a3a52;
+        }
+
+        .nota-data {
+            color: #666;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+
+        .nota-texto {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .loading {
+            text-align: center;
+            color: #1a3a52;
+            font-size: 1.1em;
+            padding: 40px;
+        }
+
+        .error {
+            background: #e74c3c;
+            color: white;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .firac-container {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-4col {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-2col {
+                grid-template-columns: 1fr;
+            }
+
+            .header-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .pasta-display {
+                border-right: none;
+                border-bottom: 2px solid #d0c9bd;
+                padding-right: 0;
+                padding-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER AZUL ESCURO -->
+    <div class="header-top">
+        <div class="header-left">Sistema Jurídico Agêntico</div>
+        <div class="header-right">
+            <button class="btn-header" onclick="window.history.back()">← Voltar</button>
+            <div class="search-box">
+                <input type="text" id="busca" placeholder="Buscar processo..." onkeypress="if(event.key==='Enter') buscarProcesso()">
+                <button class="btn-header" onclick="buscarProcesso()" style="background: rgba(255, 255, 255, 0.2); padding: 8px 12px;">🔍</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="container" id="container-main">
+        <div style="text-align: center; padding: 40px;">
+            <div class="loading">Carregando processo...</div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://192.168.156.11:8000/api/v1';
+        const API_KEY = 'sistema_juridico_cid_2025';
+
+        const headers = {
+            'X-API-Key': API_KEY,
+            'Content-Type': 'application/json'
+        };
+
+        let processoAtual = null;
+        let notasProcesso = [];
+        let firacSecaoAtiva = 'dados';
+
+        function obterCNJdaURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('cnj');
+        }
+
+        async function carregarProcesso() {
+            const cnj = obterCNJdaURL();
+            
+            if (!cnj) {
+                mostrarErro('CNJ não fornecido na URL');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_URL}/processos/${cnj}`, { headers });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                const processo = await response.json();
+                processoAtual = processo;
+                carregarNotas();
+                renderizar(processo);
+                
+            } catch (error) {
+                console.error('Erro:', error);
+                mostrarErro(`Erro ao carregar processo: ${error.message}`);
+            }
+        }
+
+        function renderizar(processo) {
+            const pasta = processo.pasta || 'N/A';
+            const cnj = processo.cnj || 'N/A';
+            const status = processo.status || 'novo';
+            const tribunal = processo.tribunal || '1ª Instância';
+
+            let pastaCompleta = pasta;
+            if (cnj !== 'N/A') {
+                pastaCompleta = `${pasta}_${cnj}`;
+            } else {
+                pastaCompleta = `${pasta}_PRE`;
+            }
+
+            const pastaUrl = `file:///Users/cidfreitas/Google%20Drive/Advocacia/${pastaCompleta.replace(/\s+/g, '%20')}/`;
+
+            const html = `
+                <!-- HEADER CARD LIMPO -->
+                <div class="header-card">
+                    <div class="header-info">
+                        <div class="pasta-display">${pasta}</div>
+                        <div class="cnj-display">${cnj}</div>
+                        <div class="status-display">
+                            <span class="badge">${status.toUpperCase()}</span>
+                            <span class="badge">${tribunal}</span>
+                            ${renderizarBadgePrazo(processo)}
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-pasta" onclick="window.open('${pastaUrl}')">📂 Pasta</button>
+                    </div>
+                </div>
+
+                <!-- TABS -->
+                <div class="tabs">
+                    <button class="tab active" onclick="mostrarTab('dados')">Dados</button>
+                    <button class="tab" onclick="mostrarTab('firac')">FIRAC</button>
+                    <button class="tab" onclick="mostrarTab('cronologia')">Cronologia</button>
+                    <button class="tab" onclick="mostrarTab('andamentos')">Andamentos</button>
+                    <button class="tab" onclick="mostrarTab('pesquisa')">Pesquisa</button>
+                    <button class="tab" onclick="mostrarTab('minutas')">Minutas</button>
+                    <button class="tab" onclick="mostrarTab('notas')">Notas</button>
+                </div>
+
+                <!-- DADOS -->
+                <div id="dados" class="tab-content active">
+                    <h2>📋 Dados do Processo</h2>
+                    <div class="grid-2col">
+                        <div class="info-card">
+                            <h3>Informações</h3>
+                            <div class="info-item">
+                                <div class="info-label">Classe</div>
+                                <div class="info-value">${processo.tipo_processo || 'N/A'}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Assunto</div>
+                                <div class="info-value">${processo.assunto || 'N/A'}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Tribunal</div>
+                                <div class="info-value">${tribunal}</div>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Partes</h3>
+                            <div class="info-item">
+                                <div class="info-label">Autor</div>
+                                <div class="info-value">${processo.parte || 'N/A'}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Réu</div>
+                                <div class="info-value">${processo.adversa || 'N/A'}</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Cliente É</div>
+                                <div class="info-value">Autor (Defesa Ativa)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FIRAC PROFISSIONAL -->
+                <div id="firac" class="tab-content">
+                    <h2>📊 Análise FIRAC</h2>
+                    <div class="firac-container">
+                        <!-- SIDEBAR -->
+                        <div class="firac-sidebar">
+                            <div class="firac-sidebar-title">NAVEGAÇÃO</div>
+                            <ul class="firac-menu">
+                                <li class="firac-menu-item active" onclick="mostrarFiracSecao('dados')">
+                                    <span class="firac-menu-number">1</span> Dados do Processo
+                                </li>
+                                <li class="firac-menu-item" onclick="mostrarFiracSecao('fatos')">
+                                    <span class="firac-menu-number">2</span> Fatos
+                                </li>
+                                <li class="firac-menu-item" onclick="mostrarFiracSecao('questao')">
+                                    <span class="firac-menu-number">3</span> Questão Central
+                                </li>
+                                <li class="firac-menu-item" onclick="mostrarFiracSecao('pontos')">
+                                    <span class="firac-menu-number">4</span> Pontos Controvertidos
+                                </li>
+                                <li class="firac-menu-item" onclick="mostrarFiracSecao('direito')">
+                                    <span class="firac-menu-number">5</span> Direito Aplicável
+                                </li>
+                                <li class="firac-menu-item" onclick="mostrarFiracSecao('argumentos-a')">
+                                    <span class="firac-menu-number">6</span> Argumentos (Autor)
+                                </li>
+                                <li class="firac-menu-item" onclick="mostrarFiracSecao('argumentos-r')">
+                                    <span class="firac-menu-number">7</span> Argumentos (Réu)
+                                </li>
+                                <li class="firac-menu-item" onclick="mostrarFiracSecao('pesquisa-j')">
+                                    <span class="firac-menu-number">8</span> Pesquisa Jurisprudência
+                                </li>
+                                <li class="firac-menu-item" onclick="mostrarFiracSecao('conclusao')">
+                                    <span class="firac-menu-number">9</span> Conclusão
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- CONTEÚDO -->
+                        <div class="firac-content" id="firac-content">
+                            ${renderizarFiracDados(processo)}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRONOLOGIA -->
+                <div id="cronologia" class="tab-content">
+                    <h2>📅 Cronologia</h2>
+                    ${renderizarCronologia(processo)}
+                </div>
+
+                <!-- ANDAMENTOS -->
+                <div id="andamentos" class="tab-content">
+                    <h2>📝 Andamentos</h2>
+                    ${renderizarAndamentos(processo)}
+                </div>
+
+                <!-- PESQUISA -->
+                <div id="pesquisa" class="tab-content">
+                    <h2>🔍 Pesquisa Jurisprudência</h2>
+                    <p style="color: #666; margin-bottom: 20px;">Adicione jurisprudência relacionada ao processo aqui.</p>
+                </div>
+
+                <!-- MINUTAS -->
+                <div id="minutas" class="tab-content">
+                    <h2>📄 Peças Processuais</h2>
+                    <p style="color: #666; margin-bottom: 20px;">Arquivos e peças do processo serão listados aqui.</p>
+                </div>
+
+                <!-- NOTAS -->
+                <div id="notas" class="tab-content">
+                    <h2>✍️ Notas Pessoais</h2>
+                    <textarea class="nota-input" id="nota-input" placeholder="Adicione uma nota..."></textarea>
+                    <button class="btn-adicionar-nota" onclick="adicionarNota()">+ Adicionar Nota</button>
+                    <div id="notas-container" style="margin-top: 20px;">${renderizarNotas()}</div>
+                </div>
+            `;
+
+            document.getElementById('container-main').innerHTML = html;
+        }
+
+        function renderizarBadgePrazo(processo) {
+            const prazos = processo.prazos || [];
+            if (prazos.length === 0) return '';
+
+            const prazo = prazos[0];
+            const vencimento = new Date(prazo.data_vencimento);
+            const hoje = new Date();
+            const dias = Math.floor((vencimento - hoje) / (1000 * 60 * 60 * 24));
+
+            if (dias < 0) {
+                return `<span class="prazo-badge">🔴 VENCIDO há ${Math.abs(dias)}d</span>`;
+            } else if (dias <= 3) {
+                return `<span class="prazo-badge">🔴 CRÍTICO: ${dias}d</span>`;
+            }
+            return '';
+        }
+
+        function renderizarFiracDados(processo) {
+            return `
+                <div class="firac-section-title">
+                    <span class="firac-icon">📋</span>
+                    Dados do Processo
+                </div>
+
+                <div class="complexidade-box">
+                    <div class="complexidade-label">GRAU DE COMPLEXIDADE</div>
+                    <div class="complexidade-valor">⚡ MÉDIA</div>
+                </div>
+
+                <div class="grid-4col">
+                    <div class="data-card">
+                        <div class="data-card-label">Número</div>
+                        <div class="data-card-value">${processo.cnj || 'N/A'}</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-card-label">Classe</div>
+                        <div class="data-card-value">${processo.tipo_processo || 'N/A'}</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-card-label">Autor</div>
+                        <div class="data-card-value">${(processo.parte || 'N/A').substring(0, 20)}...</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-card-label">Réu</div>
+                        <div class="data-card-value">${(processo.adversa || 'N/A').substring(0, 20)}...</div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>Síntese do Caso</h3>
+                    <div class="info-value">MS em que empresa optante pelo Simples Nacional questiona inclusão do ISS na base de cálculo dos tributos.</div>
+                    
+                    <div class="pontos-box">
+                        <h4>🎯 Pontos Nevrálgicos:</h4>
+                        <ul>
+                            <li>Regularidade da Notificação</li>
+                            <li>Autenticidade da Assinatura</li>
+                            <li>Tutela de Urgência</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px;" class="info-card">
+                    <h3>Questão Central</h3>
+                    <div class="info-value">O ISS deve ser excluído da base de cálculo dos tributos recolhidos no Simples Nacional?</div>
+                </div>
+            `;
+        }
+
+        function mostrarFiracSecao(secao) {
+            firacSecaoAtiva = secao;
+            document.querySelectorAll('.firac-menu-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.closest('.firac-menu-item').classList.add('active');
+
+            let conteudo = '';
+            switch(secao) {
+                case 'dados':
+                    conteudo = renderizarFiracDados(processoAtual);
+                    break;
+                case 'fatos':
+                    conteudo = `<div class="firac-section-title"><span class="firac-icon">📖</span>Fatos</div>
+                        <div class="info-card">
+                            <div class="info-value">Empresa ajuizou MS em 2015 contestando a inclusão do ISS na base de cálculo. Cliente é optante pelo Simples Nacional desde...</div>
+                        </div>`;
+                    break;
+                case 'questao':
+                    conteudo = `<div class="firac-section-title"><span class="firac-icon">❓</span>Questão Central</div>
+                        <div class="info-card">
+                            <div class="info-value">O ISS deve ser excluído da base de cálculo dos tributos recolhidos no Simples Nacional?</div>
+                        </div>`;
+                    break;
+                case 'pontos':
+                    conteudo = `<div class="firac-section-title"><span class="firac-icon">⚠️</span>Pontos Controvertidos</div>
+                        <div class="info-card">
+                            <ul style="list-style-position: inside; line-height: 1.8;">
+                                <li>Interpretação da LC 123/2006</li>
+                                <li>Alcance da base de cálculo</li>
+                                <li>Aplicação a ISS</li>
+                            </ul>
+                        </div>`;
+                    break;
+                case 'direito':
+                    conteudo = `<div class="firac-section-title"><span class="firac-icon">⚖️</span>Direito Aplicável</div>
+                        <div class="info-card">
+                            <div class="info-value"><strong>Lei Complementar 123/2006</strong> - Regimes tributários especiais<br><strong>Lei 5.172/1966</strong> - Código Tributário Nacional</div>
+                        </div>`;
+                    break;
+                case 'argumentos-a':
+                    conteudo = `<div class="firac-section-title"><span class="firac-icon">✍️</span>Argumentos (Autor)</div>
+                        <div class="info-card">
+                            <div class="info-value">Jurisprudência favorável do STJ reconhecendo a exclusão do ISS da base de cálculo...</div>
+                        </div>`;
+                    break;
+                case 'argumentos-r':
+                    conteudo = `<div class="firac-section-title"><span class="firac-icon">🛡️</span>Argumentos (Réu)</div>
+                        <div class="info-card">
+                            <div class="info-value">RFB mantém posição de que ISS integra base de cálculo conforme disposições legais...</div>
+                        </div>`;
+                    break;
+                case 'pesquisa-j':
+                    conteudo = `<div class="firac-section-title"><span class="firac-icon">📚</span>Pesquisa Jurisprudência</div>
+                        <div class="info-card">
+                            <div class="info-value"><strong>STJ - REsp 1234567 (2024):</strong> Decisão favorável sobre exclusão de ISS</div>
+                        </div>`;
+                    break;
+                case 'conclusao':
+                    conteudo = `<div class="firac-section-title"><span class="firac-icon">✓</span>Conclusão</div>
+                        <div class="info-card">
+                            <div class="info-value"><strong>Recomendação:</strong> Prosseguir com apelação. Caso apresenta precedentes favoráveis e argumentação sólida.</div>
+                        </div>`;
+                    break;
+            }
+
+            document.getElementById('firac-content').innerHTML = conteudo;
+        }
+
+        function mostrarFiracSecao(secao) {
+            firacSecaoAtiva = secao;
+            document.querySelectorAll('.firac-menu-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.closest('.firac-menu-item').classList.add('active');
+
+            let conteudo = '';
+            switch(secao) {
+                case 'dados':
+                    conteudo = renderizarFiracDados(processoAtual);
+                    break;
+                case 'fatos':
+                    conteudo = `<div class="firac-section-title"><span class="firac-icon">📖</span> Fatos</div>
+                        <div class="info-card">
+                            <div class="info-value">Empresa ajuizou MS em 2015 contestando a inclusão do ISS na base de cálculo...</div>
+                        </div>`;
+                    break;
+                default:
+                    conteudo = `<div class="firac-section-title">Seção em desenvolvimento</div>
+                        <p style="color: #666;">Esta seção será alimentada pelo prompt FIRAC.</p>`;
+            }
+
+            document.getElementById('firac-content').innerHTML = conteudo;
+        }
+
+        function renderizarCronologia(processo) {
+            const andamentos = processo.andamentos || [];
+            return andamentos.map(a => `
+                <div class="andamento-item">
+                    <div class="andamento-data">${a.data_andamento}</div>
+                    <div class="andamento-tipo">${a.tipo_andamento}</div>
+                    <div class="andamento-desc">${a.descricao.substring(0, 150)}...</div>
+                </div>
+            `).join('');
+        }
+
+        function renderizarAndamentos(processo) {
+            const andamentos = processo.andamentos || [];
+            if (andamentos.length === 0) return '<p style="color: #666;">Nenhum andamento registrado.</p>';
+
+            return andamentos.map(a => `
+                <div class="andamento-item">
+                    <div class="andamento-data">${a.data_andamento}</div>
+                    <div class="andamento-tipo">${a.tipo_andamento}</div>
+                    <div class="andamento-desc">${a.descricao}</div>
+                </div>
+            `).join('');
+        }
+
+        function carregarNotas() {
+            const cnj = obterCNJdaURL();
+            const chave = `notas_${cnj}`;
+            const notas = localStorage.getItem(chave);
+            notasProcesso = notas ? JSON.parse(notas) : [];
+        }
+
+        function renderizarNotas() {
+            if (notasProcesso.length === 0) {
+                return '<p style="color: #666;">Nenhuma nota adicionada ainda.</p>';
+            }
+
+            return notasProcesso.map(n => `
+                <div class="nota-item">
+                    <div class="nota-data">${n.data}</div>
+                    <div class="nota-texto">${n.texto}</div>
+                </div>
+            `).join('');
+        }
+
+        function adicionarNota() {
+            const texto = document.getElementById('nota-input').value.trim();
+            if (!texto) return;
+
+            const cnj = obterCNJdaURL();
+            const nota = {
+                data: new Date().toLocaleDateString('pt-BR'),
+                texto: texto
+            };
+
+            notasProcesso.unshift(nota);
+            const chave = `notas_${cnj}`;
+            localStorage.setItem(chave, JSON.stringify(notasProcesso));
+
+            document.getElementById('nota-input').value = '';
+            document.getElementById('notas-container').innerHTML = renderizarNotas();
+        }
+
+        function mostrarTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function buscarProcesso() {
+            const busca = document.getElementById('busca').value;
+            if (!busca) return;
+            alert('Funcionalidade de busca será implementada em breve');
+        }
+
+        function mostrarErro(msg) {
+            document.getElementById('container-main').innerHTML = `<div class="error">${msg}</div>`;
+        }
+
+        carregarProcesso();
+    </script>
+</body>
+</html>
